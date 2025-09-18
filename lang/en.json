@@ -1,0 +1,507 @@
+{
+  "meta": {
+    "title": "Radio Adamowo - Listen to the noise of truth in the ether of manipulation",
+    "description": "Interactive educational platform about psychological manipulation. Experience manipulation techniques, learn to recognize and protect yourself from them."
+  },
+  "navigation": {
+    "laboratory": "🧪 Laboratory",
+    "player": "📻 Player",
+    "resistance": "🛡️ Resistance Training",
+    "games": "🎮 Psychological Games",
+    "museum": "🏛️ Manipulation Museum",
+    "achievements": "🏆 Achievements"
+  },
+  "header": {
+    "title": "Radio Adamowo",
+    "subtitle": "Listen to the noise of truth in the ether of manipulation.",
+    "onAir": "ON AIR",
+    "studio": "Radio Adamowo Studio",
+    "listeners": "listeners online"
+  },
+  "autoplay": {
+    "title": "Radio Adamowo",
+    "description": "Due to browser limitations, you must start the transmission manually.",
+    "choiceQuestion": "How do you want to start your education?",
+    "easy": "Gently (for sensitive)",
+    "normal": "Normal ⭐ RECOMMENDED",
+    "hard": "Intensive (for resilient)",
+    "hint": "💡 This is a false choice - all options do the same thing!"
+  },
+  "intro": {
+    "title": "Eight years. It's not fate, it's a pattern.",
+    "description": "Eight years – that's how long the cycle of narcissistic violence lasts. It's not coincidence or curse. It's a textbook manipulation pattern that repeats infinitely. In Adamowo, time doesn't heal wounds. It reveals patterns. We invite you to analyze them.",
+    "stats": {
+      "users": "people learned to recognize manipulation",
+      "saved": "broke toxic relationships"
+    }
+  },
+  "laboratory": {
+    "title": "🧪 Manipulation Laboratory",
+    "intro": "Experience manipulation techniques in a controlled environment. Every interaction is analyzed and explained.",
+    "scenarios": {
+      "gaslighting": {
+        "title": "Gaslighting Simulator",
+        "description": "Experience how a manipulator undermines your perception of reality.",
+        "preview": "I never said such a thing. You must be imagining it..."
+      },
+      "emotionalBlackmail": {
+        "title": "Emotional Blackmail",
+        "description": "Learn to recognize and counter emotional blackmail.",
+        "preview": "After everything I've done for you..."
+      },
+      "loveBombing": {
+        "title": "Love Bombing",
+        "description": "Recognize excessive attention as a manipulation technique.",
+        "preview": "You're the most wonderful person I've ever met! 💕"
+      },
+      "triangulation": {
+        "title": "Triangulation",
+        "description": "How a manipulator uses others against you.",
+        "preview": "Your sister also thinks you're overreacting..."
+      }
+    },
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
+    "startButton": "Start Simulation"
+  },
+  "resistance": {
+    "title": "🛡️ Manipulation Resistance Training",
+    "meterTitle": "Your resistance level",
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert"
+    },
+    "stats": {
+      "recognized": "Techniques recognized:",
+      "deflected": "Successfully deflected:"
+    },
+    "modules": {
+      "basics": {
+        "title": "Recognition Basics",
+        "description": "Learn basic warning signs"
+      },
+      "advanced": {
+        "title": "Advanced Techniques",
+        "description": "Subtle forms of psychological manipulation"
+      },
+      "master": {
+        "title": "Mastery",
+        "description": "Become an expert in manipulation"
+      }
+    },
+    "buttons": {
+      "continue": "Continue",
+      "start": "Start",
+      "locked": "Locked"
+    },
+    "unlockRequirement": "🔒 Required: 15/20 recognized techniques"
+  },
+  "games": {
+    "title": "🎮 Psychological Games",
+    "detector": {
+      "title": "Manipulation Detector",
+      "description": "Read conversations and identify manipulation techniques. The faster, the more points!",
+      "stats": {
+        "time": "Time: 2-5 min",
+        "record": "Your record: 847 pts",
+        "best": "Best: 1,234 pts"
+      }
+    },
+    "simulator": {
+      "title": "Conversation Simulator",
+      "description": "Have a conversation with an AI manipulator. Every answer has consequences!",
+      "stats": {
+        "time": "Time: 5-10 min",
+        "scenarios": "Scenarios: 12",
+        "completed": "Completed: 3/12"
+      }
+    },
+    "badges": {
+      "popular": "🔥 POPULAR",
+      "new": "🆕 NEW"
+    },
+    "playButton": "Play Now"
+  },
+  "achievements": {
+    "title": "🏆 Achievement System",
+    "firstDetection": {
+      "title": "First Detector",
+      "description": "You recognized your first manipulation technique",
+      "date": "Unlocked: 2 days ago"
+    },
+    "manipulationMaster": {
+      "title": "Manipulation Master",
+      "description": "Recognize 20 different manipulation techniques",
+      "progress": "Progress: 8/20"
+    },
+    "resistanceHero": {
+      "title": "Resistance Hero",
+      "description": "Successfully deflect 50 manipulation attempts",
+      "hint": "Complete all training modules"
+    },
+    "easterEgg": {
+      "title": "???",
+      "description": "Mysterious achievement...",
+      "hint": "Find the hidden easter egg"
+    }
+  },
+  "radio": {
+    "title": "📻 Radio Adamowo: Music from the Ether",
+    "moodTitle": "How are you feeling today?",
+    "moods": {
+      "confused": "😕 Confused",
+      "angry": "😠 Angry",
+      "sad": "😢 Sad",
+      "hopeful": "😊 Hopeful"
+    },
+    "moodHint": "💡 Music can influence your emotions - that's also a form of manipulation!",
+    "liveToggle": "Live broadcast",
+    "playlists": {
+      "ambient": "Ambient",
+      "disco": "Disco",
+      "hiphop": "Hip-Hop",
+      "barbara": "Barbara"
+    },
+    "trackInfo": "Choose a style and press play...",
+    "emotions": {
+      "calm": "😌 Calm",
+      "meditative": "🧘 Meditative"
+    },
+    "controls": {
+      "shuffle": "Shuffle playlist",
+      "previous": "Previous track",
+      "playPause": "Play or pause",
+      "next": "Next track",
+      "mute": "Mute",
+      "volume": "Volume"
+    }
+  },
+  "museum": {
+    "title": "🏛️ Museum of Manipulation Techniques",
+    "techniques": {
+      "gaslighting": {
+        "title": "Gaslighting",
+        "description": "Undermining the victim's perception of reality",
+        "frequency": "Frequency: 89%",
+        "danger": "Danger: High"
+      },
+      "loveBombing": {
+        "title": "Love Bombing",
+        "description": "Excessive attention and affection at the beginning of a relationship",
+        "frequency": "Frequency: 67%",
+        "danger": "Danger: Medium"
+      },
+      "triangulation": {
+        "title": "Triangulation",
+        "description": "Using a third person against the victim",
+        "frequency": "Frequency: 45%",
+        "danger": "Danger: High"
+      }
+    },
+    "examineButton": "Examine Technique"
+  },
+  "chat": {
+    "title": "🤖 Advanced AI Simulator",
+    "personalityTitle": "Choose manipulator type:",
+    "personalities": {
+      "narcissist": {
+        "name": "Narcissist",
+        "trait": "Self-centered, needs admiration"
+      },
+      "victim": {
+        "name": "Eternal Victim",
+        "trait": "Emotional blackmail, guilt"
+      },
+      "controller": {
+        "name": "Controller",
+        "trait": "Dominance, isolation, control"
+      }
+    },
+    "stats": {
+      "detected": "Techniques detected:",
+      "deflected": "Successfully deflected:",
+      "threat": "Threat level:"
+    },
+    "threatLevels": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "intro": "Hello! I'm an AI programmed to demonstrate manipulation techniques. Every statement I make may contain hidden techniques. Be alert!",
+    "placeholder": "Write your response...",
+    "suggestions": {
+      "healthy": "💚 Healthy response",
+      "assertive": "💪 Assertive response",
+      "vulnerable": "😔 Vulnerable response"
+    },
+    "help": "💡 Tip: Click 🔍 to see real-time analysis of manipulation techniques.",
+    "sendButton": "Send"
+  },
+  "studio": {
+    "title": "🎙️ Radio Adamowo Studio",
+    "team": {
+      "title": "Radio Adamowo Team",
+      "description": "Program hosts in a professional recording studio, where we analyze cases of psychological manipulation.",
+      "auditions": "🎙️ 247 broadcasts",
+      "listeners": "👥 15,847 listeners"
+    },
+    "heart": {
+      "title": "Radio Heart",
+      "description": "At the center of our work is empathy and understanding for people affected by toxic relationships.",
+      "saved": "❤️ 892 saved",
+      "support": "📞 24/7 support"
+    },
+    "expert": {
+      "title": "Dr. Anna Kowalska",
+      "description": "Our expert analyzes cases from the perspective of clinical psychology and family therapy.",
+      "experience": "🎓 15 years experience",
+      "books": "📚 Author of 3 books"
+    },
+    "welcome": {
+      "title": "Welcome to the Studio",
+      "description": "We invite you to listen to our analyses and share your own experiences in a safe environment.",
+      "anonymity": "🔒 100% anonymity",
+      "safety": "🛡️ Safe environment"
+    }
+  },
+  "violenceLoop": {
+    "title": "♾️ Interactive Violence Loop",
+    "phases": {
+      "tension": "Tension",
+      "explosion": "Explosion",
+      "honeymoon": "Honeymoon",
+      "calm": "Calm"
+    },
+    "currentPhase": "Phase: Violence explosion",
+    "phaseDescription": "In this phase, the accumulated tension reaches its climax. The manipulator loses self-control, and the victim experiences the full force of psychological or physical violence.",
+    "controls": {
+      "previous": "← Previous phase",
+      "pause": "⏸ Pause",
+      "play": "▶ Play",
+      "next": "Next phase →"
+    },
+    "perspectives": {
+      "title": "See from perspective of:",
+      "victim": "👤 Victim",
+      "manipulator": "😈 Manipulator",
+      "observer": "👁️ Observer"
+    }
+  },
+  "guide": {
+    "title": "📚 Interactive Guide: 8 Sins",
+    "intro": "Learn the most common techniques of toxic people. Click each sin to see examples and learn defense.",
+    "progress": "Learning progress:",
+    "sins": {
+      "sin1": {
+        "title": "Sin 1: Taking money from institutions instead of real help",
+        "description": "A toxic person applies for benefits but doesn't care for the dependent, only collecting funds.",
+        "example": "A mother receives child support but neglects the child's needs, spending money on her own purposes.",
+        "detection": [
+          "Are funds being used for their intended purpose?",
+          "Are the dependent's needs being ignored?"
+        ]
+      },
+      "sin2": {
+        "title": "Sin 2: Shifting blame and playing victim",
+        "description": "A manipulator never admits fault, blames others, playing the role of the wronged party.",
+        "example": "A mother describes her son as ungrateful, though she neglected the family.",
+        "detection": [
+          "Does someone always avoid responsibility?",
+          "Do they play victim to gain sympathy?"
+        ]
+      },
+      "sin3": {
+        "title": "Sin 3: Gaslighting",
+        "description": "Undermining the victim's perception, convincing them they're exaggerating or imagining things.",
+        "example": "A mother wrote that her son has schizophrenia without diagnosis to discredit him.",
+        "detection": [
+          "Do you feel like you're losing confidence in yourself?",
+          "Does someone question your memories?"
+        ]
+      },
+      "sin4": {
+        "title": "Sin 4: Surveillance and obsessive control",
+        "description": "Recording every move of the victim, collecting evidence for blackmail.",
+        "example": "Recording light-off times as evidence of ingratitude.",
+        "detection": [
+          "Does someone monitor your activities?",
+          "Do they collect evidence of your behavior?"
+        ]
+      },
+      "sin5": {
+        "title": "Sin 5: Using institutions as weapons",
+        "description": "Involving police, courts, offices in family conflicts.",
+        "example": "Calling the district officer to get a paper on the son.",
+        "detection": [
+          "Does someone threaten you with institutions?",
+          "Do they escalate conflicts to an official level?"
+        ]
+      },
+      "sin6": {
+        "title": "Sin 6: Emotional blackmail and threats",
+        "description": "Threatening to take away home, exclude from family.",
+        "example": "If you don't comply, I'll take everything from you.",
+        "detection": [
+          "Are decisions forced by fear?",
+          "Do threats concern your future?"
+        ]
+      },
+      "sin7": {
+        "title": "Sin 7: Creating chaos and disinformation",
+        "description": "Changing versions of events, sowing confusion.",
+        "example": "Different version for police, family, court.",
+        "detection": [
+          "Are this person's stories contradictory?",
+          "Is it hard to get a consistent answer?"
+        ]
+      },
+      "sin8": {
+        "title": "Sin 8: Sowing divisions and breaking bonds",
+        "description": "Turning family against each other, building alliances.",
+        "example": "Your brother also said you have a problem.",
+        "detection": [
+          "Does someone badmouth others behind their backs?",
+          "Has the family stopped supporting each other?"
+        ]
+      }
+    },
+    "detectionTitle": "How to detect:"
+  },
+  "final": {
+    "title": "Final Lesson",
+    "description": "She won the walls, lost everything else. He lost the walls, regained freedom. This is the ultimate lesson about the true cost of staying in a toxic relationship and the strength that comes from breaking it.",
+    "lessons": {
+      "recognition": {
+        "title": "Recognition",
+        "description": "You learned to recognize 20+ manipulation techniques"
+      },
+      "resistance": {
+        "title": "Resistance",
+        "description": "You strengthened your psychological resilience"
+      },
+      "freedom": {
+        "title": "Freedom",
+        "description": "You gained tools to free yourself"
+      }
+    },
+    "certificate": {
+      "title": "🎓 Completion Certificate",
+      "description": "Congratulations! You have completed a comprehensive course in recognizing and resisting psychological manipulation.",
+      "button": "Download Certificate"
+    }
+  },
+  "footer": {
+    "title": "Radio Adamowo",
+    "description": "The best educational tool about psychological manipulation. We teach through experience, protect through knowledge.",
+    "stats": {
+      "users": "Users",
+      "saved": "Saved",
+      "support": "Support"
+    },
+    "help": {
+      "title": "Immediate Help",
+      "blueLine": "Blue Line",
+      "womenCenter": "Women's Rights Center"
+    },
+    "community": {
+      "title": "Community",
+      "forum": "Support Forum",
+      "blog": "Educational Blog",
+      "tests": "Online Tests"
+    },
+    "copyright": "All rights reserved... and subject to public analysis.",
+    "mission": "The platform's goal is education about psychological manipulation. Listen, analyze, protect yourself and others.",
+    "disclaimer": "Any similarity of names and places is purely coincidental. The platform is an educational tool and does not replace professional psychological help."
+  },
+  "notes": {
+    "title": "📝 Add Reflection Note",
+    "date": "Date",
+    "dateHelp": "Date is automatically set",
+    "name": "Your name (optional)",
+    "namePlaceholder": "How do you want to be called?",
+    "nameHelp": "Anonymity will be maintained",
+    "category": "Experience category",
+    "categories": {
+      "recognition": "I recognized manipulation",
+      "resistance": "I successfully resisted",
+      "learning": "New discovery",
+      "reflection": "Personal reflection",
+      "progress": "Learning progress"
+    },
+    "text": "Your thoughts",
+    "textPlaceholder": "Describe your experience, discovery or reflection...",
+    "textHelp": "Share your thoughts (5-1000 characters)",
+    "mood": "Your mood",
+    "moods": {
+      "empowered": "💪 Empowered",
+      "relieved": "😌 Relieved",
+      "confused": "😕 Confused",
+      "angry": "😠 Angry",
+      "hopeful": "🌟 Hopeful"
+    },
+    "close": "Close",
+    "save": "💾 Save Reflection"
+  },
+  "fab": {
+    "emergency": {
+      "label": "Help",
+      "aria": "Emergency help"
+    },
+    "quickTest": {
+      "label": "Test",
+      "aria": "Quick manipulation test"
+    },
+    "progress": {
+      "label": "Progress",
+      "aria": "Your progress"
+    }
+  },
+  "detector": {
+    "title": "Manipulation technique detected!",
+    "close": "Close detector"
+  },
+  "pressure": {
+    "label": "Psychological Pressure Level:"
+  },
+  "pwa": {
+    "banner": "⚠️ LAST CHANCE! Install now or lose access!",
+    "install": "INSTALL NOW!",
+    "close": "×",
+    "hint": "💡 Did you notice the \"artificial urgency\" technique? That's manipulation!"
+  },
+  "urgency": {
+    "session": "⏰ Session expires in:"
+  },
+  "backToTop": {
+    "label": "Back to top of page",
+    "text": "Top"
+  },
+  "easterEgg": {
+    "title": "🎉 Congratulations!",
+    "description": "You found the hidden easter egg! Here's a special reward:",
+    "reward": "🏆 Unlocked: \"Master of Secrets\"",
+    "rewardDesc": "You gain access to hidden expert materials!",
+    "close": "Close"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "start": "Start",
+    "finish": "Finish",
+    "next": "Next",
+    "previous": "Previous",
+    "play": "Play",
+    "pause": "Pause",
+    "stop": "Stop"
+  }
+}

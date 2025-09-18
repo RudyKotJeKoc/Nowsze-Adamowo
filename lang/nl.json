@@ -1,0 +1,507 @@
+{
+  "meta": {
+    "title": "Radio Adamowo - Luister naar de ruis van waarheid in de ether van manipulatie",
+    "description": "Interactief educatief platform over psychologische manipulatie. Ervaar manipulatietechnieken, leer ze te herkennen en jezelf ertegen te beschermen."
+  },
+  "navigation": {
+    "laboratory": "🧪 Laboratorium",
+    "player": "📻 Speler",
+    "resistance": "🛡️ Weerstandstraining",
+    "games": "🎮 Psychologische Spellen",
+    "museum": "🏛️ Manipulatie Museum",
+    "achievements": "🏆 Prestaties"
+  },
+  "header": {
+    "title": "Radio Adamowo",
+    "subtitle": "Luister naar de ruis van waarheid in de ether van manipulatie.",
+    "onAir": "ON AIR",
+    "studio": "Radio Adamowo Studio",
+    "listeners": "luisteraars online"
+  },
+  "autoplay": {
+    "title": "Radio Adamowo",
+    "description": "Vanwege browserbeperkingen moet je de uitzending handmatig starten.",
+    "choiceQuestion": "Hoe wil je je educatie beginnen?",
+    "easy": "Zachtjes (voor gevoelige mensen)",
+    "normal": "Normaal ⭐ AANBEVOLEN",
+    "hard": "Intensief (voor veerkrachtige mensen)",
+    "hint": "💡 Dit is een valse keuze - alle opties doen hetzelfde!"
+  },
+  "intro": {
+    "title": "Acht jaar. Het is geen lot, het is een patroon.",
+    "description": "Acht jaar – zo lang duurt de cyclus van narcistisch geweld. Het is geen toeval of vloek. Het is een leerboekpatroon van manipulatie dat zich oneindig herhaalt. In Adamowo heelt tijd geen wonden. Het onthult patronen. We nodigen je uit om ze te analyseren.",
+    "stats": {
+      "users": "mensen leerden manipulatie herkennen",
+      "saved": "verbraken toxische relaties"
+    }
+  },
+  "laboratory": {
+    "title": "🧪 Manipulatie Laboratorium",
+    "intro": "Ervaar manipulatietechnieken in een gecontroleerde omgeving. Elke interactie wordt geanalyseerd en uitgelegd.",
+    "scenarios": {
+      "gaslighting": {
+        "title": "Gaslighting Simulator",
+        "description": "Ervaar hoe een manipulator je perceptie van de werkelijkheid ondermijnt.",
+        "preview": "Ik heb zoiets nooit gezegd. Je beeldt het je vast in..."
+      },
+      "emotionalBlackmail": {
+        "title": "Emotionele Chantage",
+        "description": "Leer emotionele chantage herkennen en tegengaan.",
+        "preview": "Na alles wat ik voor je heb gedaan..."
+      },
+      "loveBombing": {
+        "title": "Love Bombing",
+        "description": "Herken overdreven aandacht als manipulatietechniek.",
+        "preview": "Je bent de meest geweldige persoon die ik ooit heb ontmoet! 💕"
+      },
+      "triangulation": {
+        "title": "Triangulatie",
+        "description": "Hoe een manipulator anderen tegen je gebruikt.",
+        "preview": "Je zus denkt ook dat je overdrijft..."
+      }
+    },
+    "difficulty": {
+      "easy": "Makkelijk",
+      "medium": "Gemiddeld",
+      "hard": "Moeilijk"
+    },
+    "startButton": "Start Simulatie"
+  },
+  "resistance": {
+    "title": "🛡️ Manipulatie Weerstandstraining",
+    "meterTitle": "Je weerstandsniveau",
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Gemiddeld",
+      "advanced": "Gevorderd",
+      "expert": "Expert"
+    },
+    "stats": {
+      "recognized": "Technieken herkend:",
+      "deflected": "Succesvol afgeweerd:"
+    },
+    "modules": {
+      "basics": {
+        "title": "Herkenning Basis",
+        "description": "Leer basis waarschuwingssignalen"
+      },
+      "advanced": {
+        "title": "Geavanceerde Technieken",
+        "description": "Subtiele vormen van psychologische manipulatie"
+      },
+      "master": {
+        "title": "Meesterschap",
+        "description": "Word een expert in manipulatie"
+      }
+    },
+    "buttons": {
+      "continue": "Doorgaan",
+      "start": "Starten",
+      "locked": "Vergrendeld"
+    },
+    "unlockRequirement": "🔒 Vereist: 15/20 herkende technieken"
+  },
+  "games": {
+    "title": "🎮 Psychologische Spellen",
+    "detector": {
+      "title": "Manipulatie Detector",
+      "description": "Lees gesprekken en identificeer manipulatietechnieken. Hoe sneller, hoe meer punten!",
+      "stats": {
+        "time": "Tijd: 2-5 min",
+        "record": "Je record: 847 pnt",
+        "best": "Beste: 1,234 pnt"
+      }
+    },
+    "simulator": {
+      "title": "Gesprek Simulator",
+      "description": "Voer een gesprek met een AI manipulator. Elk antwoord heeft gevolgen!",
+      "stats": {
+        "time": "Tijd: 5-10 min",
+        "scenarios": "Scenario's: 12",
+        "completed": "Voltooid: 3/12"
+      }
+    },
+    "badges": {
+      "popular": "🔥 POPULAIR",
+      "new": "🆕 NIEUW"
+    },
+    "playButton": "Speel Nu"
+  },
+  "achievements": {
+    "title": "🏆 Prestatie Systeem",
+    "firstDetection": {
+      "title": "Eerste Detector",
+      "description": "Je herkende je eerste manipulatietechniek",
+      "date": "Ontgrendeld: 2 dagen geleden"
+    },
+    "manipulationMaster": {
+      "title": "Manipulatie Meester",
+      "description": "Herken 20 verschillende manipulatietechnieken",
+      "progress": "Voortgang: 8/20"
+    },
+    "resistanceHero": {
+      "title": "Weerstand Held",
+      "description": "Weer succesvol 50 manipulatiepogingen af",
+      "hint": "Voltooi alle trainingsmodules"
+    },
+    "easterEgg": {
+      "title": "???",
+      "description": "Mysterieuze prestatie...",
+      "hint": "Vind het verborgen easter egg"
+    }
+  },
+  "radio": {
+    "title": "📻 Radio Adamowo: Muziek uit de Ether",
+    "moodTitle": "Hoe voel je je vandaag?",
+    "moods": {
+      "confused": "😕 Verward",
+      "angry": "😠 Boos",
+      "sad": "😢 Verdrietig",
+      "hopeful": "😊 Hoopvol"
+    },
+    "moodHint": "💡 Muziek kan je emoties beïnvloeden - dat is ook een vorm van manipulatie!",
+    "liveToggle": "Live uitzending",
+    "playlists": {
+      "ambient": "Ambient",
+      "disco": "Disco",
+      "hiphop": "Hip-Hop",
+      "barbara": "Barbara"
+    },
+    "trackInfo": "Kies een stijl en druk op play...",
+    "emotions": {
+      "calm": "😌 Rustig",
+      "meditative": "🧘 meditatief"
+    },
+    "controls": {
+      "shuffle": "Shuffle afspeellijst",
+      "previous": "Vorig nummer",
+      "playPause": "Afspelen of pauzeren",
+      "next": "Volgend nummer",
+      "mute": "Dempen",
+      "volume": "Volume"
+    }
+  },
+  "museum": {
+    "title": "🏛️ Museum van Manipulatietechnieken",
+    "techniques": {
+      "gaslighting": {
+        "title": "Gaslighting",
+        "description": "Het ondermijnen van de perceptie van de werkelijkheid van het slachtoffer",
+        "frequency": "Frequentie: 89%",
+        "danger": "Gevaar: Hoog"
+      },
+      "loveBombing": {
+        "title": "Love Bombing",
+        "description": "Overdreven aandacht en genegenheid aan het begin van een relatie",
+        "frequency": "Frequentie: 67%",
+        "danger": "Gevaar: Gemiddeld"
+      },
+      "triangulation": {
+        "title": "Triangulatie",
+        "description": "Een derde persoon tegen het slachtoffer gebruiken",
+        "frequency": "Frequentie: 45%",
+        "danger": "Gevaar: Hoog"
+      }
+    },
+    "examineButton": "Onderzoek Techniek"
+  },
+  "chat": {
+    "title": "🤖 Geavanceerde AI Simulator",
+    "personalityTitle": "Kies manipulator type:",
+    "personalities": {
+      "narcissist": {
+        "name": "Narcist",
+        "trait": "Egocentrisch, heeft bewondering nodig"
+      },
+      "victim": {
+        "name": "Eeuwig Slachtoffer",
+        "trait": "Emotionele chantage, schuldgevoel"
+      },
+      "controller": {
+        "name": "Controleur",
+        "trait": "Dominantie, isolatie, controle"
+      }
+    },
+    "stats": {
+      "detected": "Technieken gedetecteerd:",
+      "deflected": "Succesvol afgeweerd:",
+      "threat": "Dreigingsniveau:"
+    },
+    "threatLevels": {
+      "low": "Laag",
+      "medium": "Gemiddeld",
+      "high": "Hoog"
+    },
+    "intro": "Hallo! Ik ben een AI geprogrammeerd om manipulatietechnieken te demonstreren. Elke uitspraak die ik doe kan verborgen technieken bevatten. Wees alert!",
+    "placeholder": "Schrijf je reactie...",
+    "suggestions": {
+      "healthy": "💚 Gezonde reactie",
+      "assertive": "💪 Assertieve reactie",
+      "vulnerable": "😔 Kwetsbare reactie"
+    },
+    "help": "💡 Tip: Klik 🔍 om realtime analyse van manipulatietechnieken te zien.",
+    "sendButton": "Verzenden"
+  },
+  "studio": {
+    "title": "🎙️ Radio Adamowo Studio",
+    "team": {
+      "title": "Radio Adamowo Team",
+      "description": "Programma presentatoren in een professionele opnamestudio, waar we gevallen van psychologische manipulatie analyseren.",
+      "auditions": "🎙️ 247 uitzendingen",
+      "listeners": "👥 15,847 luisteraars"
+    },
+    "heart": {
+      "title": "Radio Hart",
+      "description": "In het centrum van ons werk staat empathie en begrip voor mensen die getroffen zijn door toxische relaties.",
+      "saved": "❤️ 892 gered",
+      "support": "📞 24/7 ondersteuning"
+    },
+    "expert": {
+      "title": "Dr. Anna Kowalska",
+      "description": "Onze expert analyseert gevallen vanuit het perspectief van klinische psychologie en gezinstherapie.",
+      "experience": "🎓 15 jaar ervaring",
+      "books": "📚 Auteur van 3 boeken"
+    },
+    "welcome": {
+      "title": "Welkom in de Studio",
+      "description": "We nodigen je uit om naar onze analyses te luisteren en je eigen ervaringen te delen in een veilige omgeving.",
+      "anonymity": "🔒 100% anonimiteit",
+      "safety": "🛡️ Veilige omgeving"
+    }
+  },
+  "violenceLoop": {
+    "title": "♾️ Interactieve Geweld Cyclus",
+    "phases": {
+      "tension": "Spanning",
+      "explosion": "Explosie",
+      "honeymoon": "Huwelijksreis",
+      "calm": "Rust"
+    },
+    "currentPhase": "Fase: Geweld explosie",
+    "phaseDescription": "In deze fase bereikt de opgebouwde spanning zijn hoogtepunt. De manipulator verliest zelfcontrole, en het slachtoffer ervaart de volle kracht van psychologisch of fysiek geweld.",
+    "controls": {
+      "previous": "← Vorige fase",
+      "pause": "⏸ Pauze",
+      "play": "▶ Afspelen",
+      "next": "Volgende fase →"
+    },
+    "perspectives": {
+      "title": "Bekijk vanuit perspectief van:",
+      "victim": "👤 Slachtoffer",
+      "manipulator": "😈 Manipulator",
+      "observer": "👁️ Waarnemer"
+    }
+  },
+  "guide": {
+    "title": "📚 Interactieve Gids: 8 Zonden",
+    "intro": "Leer de meest voorkomende technieken van toxische mensen. Klik op elke zonde om voorbeelden te zien en verdediging te leren.",
+    "progress": "Leervoortgang:",
+    "sins": {
+      "sin1": {
+        "title": "Zonde 1: Geld nemen van instellingen in plaats van echte hulp",
+        "description": "Een toxisch persoon vraagt uitkeringen aan maar zorgt niet voor de afhankelijke, verzamelt alleen geld.",
+        "example": "Een moeder ontvangt kinderbijslag maar verwaarloost de behoeften van het kind, en geeft geld uit aan eigen doeleinden.",
+        "detection": [
+          "Worden fondsen gebruikt voor hun beoogde doel?",
+          "Worden de behoeften van de afhankelijke genegeerd?"
+        ]
+      },
+      "sin2": {
+        "title": "Zonde 2: Schuld afschuiven en slachtoffer spelen",
+        "description": "Een manipulator geeft nooit schuld toe, geeft anderen de schuld, speelt de rol van de benadeelde partij.",
+        "example": "Een moeder beschrijft haar zoon als ondankbaar, hoewel zij het gezin verwaarloosde.",
+        "detection": [
+          "Vermijdt iemand altijd verantwoordelijkheid?",
+          "Spelen ze slachtoffer om sympathie te krijgen?"
+        ]
+      },
+      "sin3": {
+        "title": "Zonde 3: Gaslighting",
+        "description": "Het ondermijnen van de perceptie van het slachtoffer, hen ervan overtuigen dat ze overdrijven of zich dingen inbeelden.",
+        "example": "Een moeder schreef dat haar zoon schizofrenie heeft zonder diagnose om hem te discrediteren.",
+        "detection": [
+          "Voel je dat je vertrouwen in jezelf verliest?",
+          "Stelt iemand je herinneringen in twijfel?"
+        ]
+      },
+      "sin4": {
+        "title": "Zonde 4: Surveillance en obsessieve controle",
+        "description": "Elke beweging van het slachtoffer opnemen, bewijs verzamelen voor chantage.",
+        "example": "Tijden van licht uitdoen opnemen als bewijs van ondankbaarheid.",
+        "detection": [
+          "Monitort iemand je activiteiten?",
+          "Verzamelen ze bewijs van je gedrag?"
+        ]
+      },
+      "sin5": {
+        "title": "Zonde 5: Instellingen als wapens gebruiken",
+        "description": "Politie, rechtbanken, kantoren betrekken bij familieconflicten.",
+        "example": "De wijkagent bellen om een papier op de zoon te krijgen.",
+        "detection": [
+          "Bedreigt iemand je met instellingen?",
+          "Escaleren ze conflicten naar een officieel niveau?"
+        ]
+      },
+      "sin6": {
+        "title": "Zonde 6: Emotionele chantage en bedreigingen",
+        "description": "Dreigen met het wegnemen van huis, uitsluiting van familie.",
+        "example": "Als je niet meewerkt, neem ik alles van je af.",
+        "detection": [
+          "Worden beslissingen gedwongen door angst?",
+          "Betreffen bedreigingen je toekomst?"
+        ]
+      },
+      "sin7": {
+        "title": "Zonde 7: Chaos en desinformatie creëren",
+        "description": "Versies van gebeurtenissen veranderen, verwarring zaaien.",
+        "example": "Verschillende versie voor politie, familie, rechtbank.",
+        "detection": [
+          "Zijn de verhalen van deze persoon tegenstrijdig?",
+          "Is het moeilijk om een consistent antwoord te krijgen?"
+        ]
+      },
+      "sin8": {
+        "title": "Zonde 8: Verdeeldheid zaaien en banden verbreken",
+        "description": "Familie tegen elkaar opzetten, allianties bouwen.",
+        "example": "Je broer zei ook dat je een probleem hebt.",
+        "detection": [
+          "Praat iemand kwaad over anderen achter hun rug?",
+          "Is de familie gestopt met elkaar steunen?"
+        ]
+      }
+    },
+    "detectionTitle": "Hoe te detecteren:"
+  },
+  "final": {
+    "title": "Finale Les",
+    "description": "Zij won de muren, verloor al het andere. Hij verloor de muren, herkreeg vrijheid. Dit is de ultieme les over de werkelijke kosten van het blijven in een toxische relatie en de kracht die komt van het verbreken ervan.",
+    "lessons": {
+      "recognition": {
+        "title": "Herkenning",
+        "description": "Je leerde 20+ manipulatietechnieken herkennen"
+      },
+      "resistance": {
+        "title": "Weerstand",
+        "description": "Je versterkte je psychologische veerkracht"
+      },
+      "freedom": {
+        "title": "Vrijheid",
+        "description": "Je kreeg tools om jezelf te bevrijden"
+      }
+    },
+    "certificate": {
+      "title": "🎓 Voltooiings Certificaat",
+      "description": "Gefeliciteerd! Je hebt een uitgebreide cursus voltooid in het herkennen en weerstaan van psychologische manipulatie.",
+      "button": "Download Certificaat"
+    }
+  },
+  "footer": {
+    "title": "Radio Adamowo",
+    "description": "Het beste educatieve hulpmiddel over psychologische manipulatie. We onderwijzen door ervaring, beschermen door kennis.",
+    "stats": {
+      "users": "Gebruikers",
+      "saved": "Gered",
+      "support": "Ondersteuning"
+    },
+    "help": {
+      "title": "Directe Hulp",
+      "blueLine": "Blauwe Lijn",
+      "womenCenter": "Vrouwenrechten Centrum"
+    },
+    "community": {
+      "title": "Gemeenschap",
+      "forum": "Ondersteunings Forum",
+      "blog": "Educatieve Blog",
+      "tests": "Online Tests"
+    },
+    "copyright": "Alle rechten voorbehouden... en onderworpen aan publieke analyse.",
+    "mission": "Het doel van het platform is educatie over psychologische manipulatie. Luister, analyseer, bescherm jezelf en anderen.",
+    "disclaimer": "Elke gelijkenis van namen en plaatsen is puur toevallig. Het platform is een educatief hulpmiddel en vervangt geen professionele psychologische hulp."
+  },
+  "notes": {
+    "title": "📝 Voeg Reflectie Notitie Toe",
+    "date": "Datum",
+    "dateHelp": "Datum wordt automatisch ingesteld",
+    "name": "Je naam (optioneel)",
+    "namePlaceholder": "Hoe wil je genoemd worden?",
+    "nameHelp": "Anonimiteit wordt gehandhaafd",
+    "category": "Ervaring categorie",
+    "categories": {
+      "recognition": "Ik herkende manipulatie",
+      "resistance": "Ik weerstond succesvol",
+      "learning": "Nieuwe ontdekking",
+      "reflection": "Persoonlijke reflectie",
+      "progress": "Leervoortgang"
+    },
+    "text": "Je gedachten",
+    "textPlaceholder": "Beschrijf je ervaring, ontdekking of reflectie...",
+    "textHelp": "Deel je gedachten (5-1000 karakters)",
+    "mood": "Je stemming",
+    "moods": {
+      "empowered": "💪 Versterkt",
+      "relieved": "😌 Opgelucht",
+      "confused": "😕 Verward",
+      "angry": "😠 Boos",
+      "hopeful": "🌟 Hoopvol"
+    },
+    "close": "Sluiten",
+    "save": "💾 Reflectie Opslaan"
+  },
+  "fab": {
+    "emergency": {
+      "label": "Hulp",
+      "aria": "Noodhulp"
+    },
+    "quickTest": {
+      "label": "Test",
+      "aria": "Snelle manipulatie test"
+    },
+    "progress": {
+      "label": "Voortgang",
+      "aria": "Je voortgang"
+    }
+  },
+  "detector": {
+    "title": "Manipulatietechniek gedetecteerd!",
+    "close": "Detector sluiten"
+  },
+  "pressure": {
+    "label": "Psychologische Druk Niveau:"
+  },
+  "pwa": {
+    "banner": "⚠️ LAATSTE KANS! Installeer nu of verlies toegang!",
+    "install": "INSTALLEER NU!",
+    "close": "×",
+    "hint": "💡 Merkte je de \"kunstmatige urgentie\" techniek op? Dat is manipulatie!"
+  },
+  "urgency": {
+    "session": "⏰ Sessie verloopt over:"
+  },
+  "backToTop": {
+    "label": "Terug naar bovenkant van pagina",
+    "text": "Bovenkant"
+  },
+  "easterEgg": {
+    "title": "🎉 Gefeliciteerd!",
+    "description": "Je vond het verborgen easter egg! Hier is een speciale beloning:",
+    "reward": "🏆 Ontgrendeld: \"Meester van Geheimen\"",
+    "rewardDesc": "Je krijgt toegang tot verborgen expertmateriaal!",
+    "close": "Sluiten"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Succes",
+    "close": "Sluiten",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "continue": "Doorgaan",
+    "start": "Starten",
+    "finish": "Voltooien",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "play": "Afspelen",
+    "pause": "Pauze",
+    "stop": "Stop"
+  }
+}

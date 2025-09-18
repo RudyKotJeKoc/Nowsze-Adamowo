@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="pl" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta -->
+    <title data-i18n="meta.title">Radio Adamowo - Słuchaj szumu prawdy w eterze manipulacji</title>
+    <meta name="description" content="Interaktywna platforma edukacyjna o manipulacji psychologicznej. Doświadcz technik manipulacji, naucz się je rozpoznawać i chronić się przed nimi." data-i18n-content="meta.description">
+    <meta name="keywords" content="radio, manipulacja, toksyczne relacje, psychologia, edukacja, podcast, gaslighting, narcyzm">
+    <meta name="author" content="Radio Adamowo">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Radio Adamowo - Najlepsze narzędzie edukacyjne o manipulacji">
+    <meta property="og:description" content="Interaktywna platforma gdzie doświadczysz manipulacji na własnej skórze i nauczysz się ją rozpoznawać">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="public/images/studio/studio-1.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Radio Adamowo - Edukacja przez doświadczenie">
+    <meta name="twitter:description" content="Słuchaj szumu prawdy w eterze manipulacji">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#d97706">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Icons -->
+    <link rel="icon" href="public/images/studio/studio-1.png" type="image/png">
+    <link rel="apple-touch-icon" href="public/images/studio/studio-1.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-300" data-manipulation-level="0" data-user-resistance="unknown">
+    
+    <!-- Manipulation Detection Overlay -->
+    <div id="manipulation-detector" class="manipulation-detector hidden" role="alert" aria-live="assertive">
+        <div class="detector-content">
+            <div class="detector-icon">🧠</div>
+            <div class="detector-text">
+                <span class="detector-title" data-i18n="detector.title">Wykryto technikę manipulacji!</span>
+                <span class="detector-description" id="detector-description"></span>
+            </div>
+            <button id="detector-close" class="detector-close" data-i18n-aria-label="detector.close">×</button>
+        </div>
+    </div>
+
+    <!-- Psychological Pressure Bar -->
+    <div id="pressure-bar" class="pressure-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="pressure-fill"></div>
+        <span class="pressure-label" data-i18n="pressure.label">Poziom Psychologicznego Nacisku: <span id="pressure-value">0</span>%</span>
+    </div>
+
+    <!-- Skip Links for A11y -->
+    <nav class="skip-links" aria-label="Skip navigation">
+        <a href="#main-content" class="skip-link" data-i18n="navigation.skipToMain">Skocz do głównej treści</a>
+        <a href="#radio-player-section" class="skip-link" data-i18n="navigation.skipToPlayer">Skocz do odtwarzacza</a>
+        <a href="#manipulation-lab" class="skip-link" data-i18n="navigation.skipToLab">Skocz do laboratorium manipulacji</a>
+        <a href="#resistance-training" class="skip-link" data-i18n="navigation.skipToTraining">Skocz do treningu odporności</a>
+    </nav>
+    
+    <!-- PWA Install Banner -->
+    <div id="pwa-install-banner" class="pwa-banner hidden" role="banner" aria-live="polite" data-manipulation-technique="urgency">
+        <div class="pwa-banner-content">
+            <div class="wave-light" aria-hidden="true"></div>
+            <span class="pwa-banner-text" data-i18n="pwa.banner">⚠️ OSTATNIA SZANSA! Zainstaluj teraz lub stracisz dostęp!</span>
+            <button id="pwa-install-btn" class="pwa-install-button pulsing" data-i18n-aria-label="pwa.install" data-i18n="pwa.install">
+                ZAINSTALUJ TERAZ!
+            </button>
+            <button id="pwa-close-btn" class="pwa-close-button" data-i18n-aria-label="pwa.close">
+                ×
+            </button>
+        </div>
+        <div class="manipulation-hint">
+            <small data-i18n="pwa.hint">💡 Zauważyłeś technikę "sztucznej pilności"? To manipulacja!</small>
+        </div>
+    </div>
+    
+    <!-- Header with Radio Tower -->
+    <header class="hero-header studio-background-enhanced" role="banner">
+        <div class="studio-overlay" aria-hidden="true"></div>
+        <div class="psychological-overlay" aria-hidden="true"></div>
+        <div class="radio-tower">
+            <div class="tower-mast">
+                <div class="tower-base"></div>
+                <div class="tower-segments">
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                </div>
+                <div class="radio-waves">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title glitch-effect" data-i18n="header.title">Radio Adamowo</h1>
+            <p class="hero-subtitle typewriter-effect" data-i18n="header.subtitle">Nadajemy z masztu w Adamowie - słuchaj szumu prawdy w eterze manipulacji</p>
+            <div class="hero-status">
+                <div class="on-air-indicator hypnotic-pulse" aria-live="polite">
+                    🔴 <span data-i18n="header.onAir">ON AIR</span>
+                </div>
+                <div class="studio-label" data-i18n="header.studio">Studio Radia Adamowo</div>
+                <div class="listener-count" id="listener-count">
+                    <span class="listener-icon">👥</span>
+                    <span class="count-number" data-count="1247">1,247</span> <span data-i18n="header.listeners">słuchaczy online</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="pl" aria-label="Polski">🇵🇱</button>
+            <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸</button>
+            <button class="lang-btn" data-lang="nl" aria-label="Nederlands">🇳🇱</button>
+        </div>
+        
+        <!-- Social Proof Ticker -->
+        <div class="social-proof-ticker">
+            <div class="ticker-content" id="social-ticker">
+                <span>Anna z Warszawy: "Wreszcie rozumiem co mi robiła matka..." • </span>
+                <span>Marek z Krakowa: "To otworzyło mi oczy na toksyczne relacje" • </span>
+                <span>Katarzyna z Gdańska: "Każdy powinien tego posłuchać" • </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-container">
+        
+        <!-- Autoplay Overlay -->
+        <div id="autoplay-overlay" class="autoplay-overlay" role="dialog" aria-modal="true" aria-labelledby="autoplay-title">
+            <div class="autoplay-content">
+                <h2 id="autoplay-title" class="autoplay-title" data-i18n="autoplay.title">Radio Adamowo</h2>
+                <p class="autoplay-description" data-i18n="autoplay.description">Ze względu na ograniczenia przeglądarek, musisz rozpocząć transmisję ręcznie.</p>
+                
+                <div class="choice-manipulation">
+                    <p class="choice-question" data-i18n="autoplay.choiceQuestion">Jak chcesz rozpocząć swoją edukację?</p>
+                    <div class="choice-buttons">
+                        <button id="start-btn-easy" class="start-button start-easy" data-i18n="autoplay.easy">
+                            Łagodnie (dla wrażliwych)
+                        </button>
+                        <button id="start-btn-normal" class="start-button start-normal recommended" data-i18n="autoplay.normal">
+                            Normalnie ⭐ POLECANE
+                        </button>
+                        <button id="start-btn-hard" class="start-button start-hard" data-i18n="autoplay.hard">
+                            Intensywnie (dla odpornych)
+                        </button>
+                    </div>
+                    <small class="choice-hint" data-i18n="autoplay.hint">💡 To fałszywy wybór - wszystkie opcje robią to samo!</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav" role="navigation" aria-label="Nawigacja główna">
+            <div class="nav-container">
+                <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" data-i18n-aria-label="navigation.toggleMobile">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul id="mobile-menu" class="nav-menu" role="menubar">
+                    <li role="none"><a href="#radio-player-section" class="nav-link" role="menuitem" data-i18n="navigation.player">📻 Muzyka</a></li>
+                    <li role="none"><a href="#manipulation-lab" class="nav-link" role="menuitem" data-i18n="navigation.laboratory">🧪 Laboratorium</a></li>
+                    <li role="none"><a href="#resistance-training" class="nav-link" role="menuitem" data-i18n="navigation.resistance">🛡️ Trening Odporności</a></li>
+                    <li role="none"><a href="#psychological-games" class="nav-link" role="menuitem" data-i18n="navigation.games">🎮 Gry Psychologiczne</a></li>
+                    <li role="none"><a href="#manipulation-museum" class="nav-link" role="menuitem" data-i18n="navigation.museum">🏛️ Muzeum Manipulacji</a></li>
+                    <li role="none"><a href="#achievement-system" class="nav-link" role="menuitem" data-i18n="navigation.achievements">🏆 Osiągnięcia</a></li>
+                </ul>
+                
+                <div class="nav-urgency">
+                    <span class="urgency-text" data-i18n="urgency.session">⏰ Sesja wygasa za: <span id="session-timer">29:47</span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Enhanced Radio Player Section - MOVED TO TOP -->
+        <section id="radio-player-section" class="radio-section enhanced-player priority-section" aria-labelledby="radio-title">
+            <h2 id="radio-title" class="section-title" data-i18n="radio.title">📻 Radio Adamowo: Muzyka z Eteru</h2>
+            
+            <!-- Mood-based playlist selection -->
+            <div class="mood-selector">
+                <h3 class="mood-title" data-i18n="radio.moodTitle">Jak się dziś czujesz?</h3>
+                <div class="mood-buttons">
+                    <button class="mood-btn" data-mood="confused" data-playlist="ambient" data-i18n="radio.moods.confused">
+                        😕 Zdezorientowany
+                    </button>
+                    <button class="mood-btn" data-mood="angry" data-playlist="hiphop" data-i18n="radio.moods.angry">
+                        😠 Zły
+                    </button>
+                    <button class="mood-btn" data-mood="sad" data-playlist="barbara" data-i18n="radio.moods.sad">
+                        😢 Smutny
+                    </button>
+                    <button class="mood-btn" data-mood="hopeful" data-playlist="disco" data-i18n="radio.moods.hopeful">
+                        😊 Pełen nadziei
+                    </button>
+                </div>
+                <p class="mood-hint" data-i18n="radio.moodHint">💡 Muzyka może wpływać na twoje emocje - to też forma manipulacji!</p>
+            </div>
+            
+            <!-- Enhanced Playlist Controls -->
+            <div class="playlist-controls enhanced-controls" role="tablist" aria-label="Wybór playlisty">
+                <button class="playlist-btn" data-playlist="ambient" role="tab" aria-selected="false">
+                    <span class="playlist-icon">🌫️</span>
+                    <span class="playlist-name" data-i18n="radio.playlists.ambient">Ambient</span>
+                    <span class="playlist-count">12 utworów</span>
+                </button>
+                <button class="playlist-btn" data-playlist="disco" role="tab" aria-selected="false">
+                    <span class="playlist-icon">🕺</span>
+                    <span class="playlist-name" data-i18n="radio.playlists.disco">Disco</span>
+                    <span class="playlist-count">8 utworów</span>
+                </button>
+                <button class="playlist-btn" data-playlist="hiphop" role="tab" aria-selected="false">
+                    <span class="playlist-icon">🎤</span>
+                    <span class="playlist-name" data-i18n="radio.playlists.hiphop">Hip-Hop</span>
+                    <span class="playlist-count">15 utworów</span>
+                </button>
+                <button class="playlist-btn" data-playlist="barbara" role="tab" aria-selected="false">
+                    <span class="playlist-icon">🎭</span>
+                    <span class="playlist-name" data-i18n="radio.playlists.barbara">Barbara</span>
+                    <span class="playlist-count">6 utworów</span>
+                </button>
+            </div>
+            
+            <!-- Enhanced Track Info -->
+            <div id="track-info" class="track-info enhanced-track-info" aria-live="polite">
+                <div class="track-artwork">
+                    <img id="track-image" src="public/images/studio/studio-1.png" alt="Okładka utworu" class="artwork-image">
+                    <div class="artwork-overlay">
+                        <div class="visualizer-mini" id="mini-visualizer"></div>
+                    </div>
+                </div>
+                <div class="track-details">
+                    <p id="current-track" class="current-track" data-i18n="radio.trackInfo">Wybierz styl i naciśnij play...</p>
+                    <p id="track-artist" class="track-artist">Radio Adamowo</p>
+                    <div class="track-emotions">
+                        <span class="emotion-tag" data-i18n="radio.emotions.calm">😌 Spokojny</span>
+                        <span class="emotion-tag" data-i18n="radio.emotions.meditative">🧘 Medytacyjny</span>
+                    </div>
+                </div>
+                <div id="track-progress" class="track-progress enhanced-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="progress-bar"></div>
+                    <div class="progress-time">
+                        <span id="current-time">0:00</span>
+                        <span id="total-time">0:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Player Controls -->
+            <div class="player-controls enhanced-controls" role="group" aria-label="Kontrolki odtwarzacza">
+                <button id="shuffle-btn" class="control-btn" data-i18n-aria-label="radio.controls.shuffle" title="Shuffle (S)">
+                    🔀
+                </button>
+                <button id="prev-btn" class="control-btn" data-i18n-aria-label="radio.controls.previous" title="Poprzedni (←)" disabled>
+                    ⏮
+                </button>
+                <button id="play-pause-btn" class="play-pause-btn enhanced-play-btn" data-i18n-aria-label="radio.controls.playPause" title="Play/Pause (Spacja)" disabled>
+                    <span id="play-icon" class="control-icon">▶</span>
+                    <span id="pause-icon" class="control-icon hidden">⏸</span>
+                </button>
+                <button id="next-btn" class="control-btn" data-i18n-aria-label="radio.controls.next" title="Następny (→)" disabled>
+                    ⏭
+                </button>
+                <button id="mute-btn" class="control-btn" data-i18n-aria-label="radio.controls.mute" title="Wycisz (M)">
+                    🔊
+                </button>
+                <div class="volume-control">
+                    <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="100" data-i18n-aria-label="radio.controls.volume">
+                </div>
+            </div>
+            
+            <!-- Audio Element -->
+            <audio id="radio-player" class="audio-player" preload="metadata" aria-label="Odtwarzacz radia">
+                Twoja przeglądarka nie obsługuje odtwarzania audio.
+            </audio>
+        </section>
+
+        <!-- Introduction with Advanced Infinity Symbol -->
+        <section class="intro-section">
+            <div class="infinity-container interactive-infinity" role="img" aria-label="Interaktywny symbol nieskończoności reprezentujący cykl manipulacji">
+                <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" class="infinity-symbol advanced-infinity" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="infinityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#d97706;stop-opacity:1" />
+                            <stop offset="25%" style="stop-color:#ea580c;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#dc2626;stop-opacity:1" />
+                            <stop offset="75%" style="stop-color:#7c2d12;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="infinityGlow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge> 
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <path id="infinityPath" 
+                          d="M 100 100 C 100 50, 50 50, 50 100 C 50 150, 100 150, 100 100 C 100 50, 150 50, 150 100 C 150 150, 200 150, 200 100 C 200 50, 250 50, 250 100 C 250 150, 300 150, 300 100 C 300 50, 350 50, 350 100 C 350 150, 300 150, 300 100"
+                          fill="none" 
+                          stroke="url(#infinityGradient)" 
+                          stroke-width="4" 
+                          stroke-linecap="round"
+                          filter="url(#infinityGlow)"
+                          pathLength="100"
+                          class="infinity-path interactive-path" />
+                    
+                    <circle id="infinityMarker1" class="infinity-marker manipulation-marker" 
+                            r="6" fill="#fbbf24" filter="url(#infinityGlow)">
+                        <animateMotion dur="12s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#infinityPath"/>
+                        </animateMotion>
+                        <title>Gaslighting</title>
+                    </circle>
+                    
+                    <circle id="infinityMarker2" class="infinity-marker manipulation-marker" 
+                            r="5" fill="#dc2626" filter="url(#infinityGlow)">
+                        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto" begin="2s">
+                            <mpath href="#infinityPath"/>
+                        </animateMotion>
+                        <title>Szantaż emocjonalny</title>
+                    </circle>
+                    
+                    <circle id="infinityMarker3" class="infinity-marker manipulation-marker" 
+                            r="4" fill="#7c2d12" filter="url(#infinityGlow)">
+                        <animateMotion dur="15s" repeatCount="indefinite" rotate="auto" begin="4s">
+                            <mpath href="#infinityPath"/>
+                        </animateMotion>
+                        <title>Triangulacja</title>
+                    </circle>
+                    
+                    <circle class="hotspot" cx="100" cy="100" r="15" fill="transparent" 
+                            data-technique="gaslighting" tabindex="0" role="button" 
+                            aria-label="Kliknij aby dowiedzieć się o gaslightingu"/>
+                    <circle class="hotspot" cx="300" cy="100" r="15" fill="transparent" 
+                            data-technique="emotional-blackmail" tabindex="0" role="button" 
+                            aria-label="Kliknij aby dowiedzieć się o szantażu emocjonalnym"/>
+                </svg>
+                
+                <div class="manipulation-counter">
+                    <span class="counter-label">Technik manipulacji wykrytych:</span>
+                    <span class="counter-value" id="manipulation-count">0</span>
+                </div>
+            </div>
+            
+            <h2 class="intro-title" data-i18n="intro.title">Osiem lat. To nie fatum, to wzorzec.</h2>
+            <p class="intro-text" data-i18n="intro.description">
+                Osiem lat – tyle trwa cykl narcystycznej przemocy. To nie przypadek czy klątwa. 
+                To podręcznikowy wzorzec manipulacji, który powtarza się w nieskończoność. 
+                W Adamowie czas nie leczy ran. On ujawnia schematy. Zapraszamy do ich analizy.
+            </p>
+            
+            <div class="intro-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="15847">15,847</span>
+                    <span class="stat-label" data-i18n="intro.stats.users">osób nauczyło się rozpoznawać manipulację</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="892">892</span>
+                    <span class="stat-label" data-i18n="intro.stats.saved">przerwało toksyczne relacje</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manipulation Laboratory -->
+        <section id="manipulation-lab" class="manipulation-lab-section" aria-labelledby="lab-title">
+            <h2 id="lab-title" class="section-title" data-i18n="laboratory.title">🧪 Laboratorium Manipulacji</h2>
+            <p class="lab-intro" data-i18n="laboratory.intro">
+                Doświadcz technik manipulacji w kontrolowanym środowisku. Każda interakcja jest analizowana i wyjaśniana.
+            </p>
+            
+            <div class="manipulation-scenarios">
+                <div class="scenario-grid">
+                    
+                    <div class="scenario-card" data-scenario="gaslighting">
+                        <div class="scenario-header">
+                            <h3 class="scenario-title" data-i18n="laboratory.scenarios.gaslighting.title">Symulator Gaslightingu</h3>
+                            <div class="difficulty-badge difficulty-medium" data-i18n="laboratory.difficulty.medium">Średni</div>
+                        </div>
+                        <div class="scenario-content">
+                            <p class="scenario-description" data-i18n="laboratory.scenarios.gaslighting.description">
+                                Doświadcz jak manipulant podważa twoją percepcję rzeczywistości.
+                            </p>
+                            <div class="scenario-preview">
+                                <div class="chat-preview">
+                                    <div class="message manipulator" data-i18n="laboratory.scenarios.gaslighting.preview">
+                                        "Nigdy czegoś takiego nie powiedziałem. Chyba ci się wydaje..."
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="scenario-start-btn" data-scenario="gaslighting" data-i18n="laboratory.startButton">
+                                Rozpocznij Symulację
+                            </button>
+                        </div>
+                        <div class="scenario-stats">
+                            <span class="stat">👥 1,247 użytkowników</span>
+                            <span class="stat">⭐ 4.8/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-card" data-scenario="emotional-blackmail">
+                        <div class="scenario-header">
+                            <h3 class="scenario-title" data-i18n="laboratory.scenarios.emotionalBlackmail.title">Szantaż Emocjonalny</h3>
+                            <div class="difficulty-badge difficulty-hard" data-i18n="laboratory.difficulty.hard">Trudny</div>
+                        </div>
+                        <div class="scenario-content">
+                            <p class="scenario-description" data-i18n="laboratory.scenarios.emotionalBlackmail.description">
+                                Naucz się rozpoznawać i odpierać szantaż emocjonalny.
+                            </p>
+                            <div class="scenario-preview">
+                                <div class="chat-preview">
+                                    <div class="message manipulator" data-i18n="laboratory.scenarios.emotionalBlackmail.preview">
+                                        "Po tym wszystkim co dla ciebie zrobiłem..."
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="scenario-start-btn" data-scenario="emotional-blackmail" data-i18n="laboratory.startButton">
+                                Rozpocznij Symulację
+                            </button>
+                        </div>
+                        <div class="scenario-stats">
+                            <span class="stat">👥 892 użytkowników</span>
+                            <span class="stat">⭐ 4.9/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-card" data-scenario="love-bombing">
+                        <div class="scenario-header">
+                            <h3 class="scenario-title" data-i18n="laboratory.scenarios.loveBombing.title">Love Bombing</h3>
+                            <div class="difficulty-badge difficulty-easy" data-i18n="laboratory.difficulty.easy">Łatwy</div>
+                        </div>
+                        <div class="scenario-content">
+                            <p class="scenario-description" data-i18n="laboratory.scenarios.loveBombing.description">
+                                Rozpoznaj nadmierną uwagę jako technikę manipulacji.
+                            </p>
+                            <div class="scenario-preview">
+                                <div class="chat-preview">
+                                    <div class="message manipulator" data-i18n="laboratory.scenarios.loveBombing.preview">
+                                        "Jesteś najwspanialszą osobą jaką spotkałem! 💕"
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="scenario-start-btn" data-scenario="love-bombing" data-i18n="laboratory.startButton">
+                                Rozpocznij Symulację
+                            </button>
+                        </div>
+                        <div class="scenario-stats">
+                            <span class="stat">👥 2,156 użytkowników</span>
+                            <span class="stat">⭐ 4.7/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-card" data-scenario="triangulation">
+                        <div class="scenario-header">
+                            <h3 class="scenario-title" data-i18n="laboratory.scenarios.triangulation.title">Triangulacja</h3>
+                            <div class="difficulty-badge difficulty-hard" data-i18n="laboratory.difficulty.hard">Trudny</div>
+                        </div>
+                        <div class="scenario-content">
+                            <p class="scenario-description" data-i18n="laboratory.scenarios.triangulation.description">
+                                Jak manipulant wykorzystuje innych przeciwko tobie.
+                            </p>
+                            <div class="scenario-preview">
+                                <div class="chat-preview">
+                                    <div class="message manipulator" data-i18n="laboratory.scenarios.triangulation.preview">
+                                        "Twoja siostra też uważa, że przesadzasz..."
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="scenario-start-btn" data-scenario="triangulation" data-i18n="laboratory.startButton">
+                                Rozpocznij Symulację
+                            </button>
+                        </div>
+                        <div class="scenario-stats">
+                            <span class="stat">👥 634 użytkowników</span>
+                            <span class="stat">⭐ 4.6/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resistance Training Section -->
+        <section id="resistance-training" class="resistance-section" aria-labelledby="resistance-title">
+            <h2 id="resistance-title" class="section-title" data-i18n="resistance.title">🛡️ Trening Odporności na Manipulację</h2>
+            
+            <div class="resistance-meter">
+                <div class="meter-header">
+                    <h3 class="meter-title" data-i18n="resistance.meterTitle">Twój poziom odporności</h3>
+                    <span class="resistance-level" id="resistance-level" data-i18n="resistance.levels.beginner">Początkujący</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="resistance-fill" style="width: 15%"></div>
+                </div>
+                <div class="meter-stats">
+                    <span class="stat">🎯 <span data-i18n="resistance.stats.recognized">Rozpoznanych technik:</span> <span id="techniques-recognized">3/20</span></span>
+                    <span class="stat">💪 <span data-i18n="resistance.stats.deflected">Skutecznie odparto:</span> <span id="techniques-deflected">1/3</span></span>
+                </div>
+            </div>
+            
+            <div class="training-modules">
+                <div class="module-card unlocked" data-module="basics">
+                    <div class="module-icon">🎯</div>
+                    <h4 class="module-title" data-i18n="resistance.modules.basics.title">Podstawy Rozpoznawania</h4>
+                    <p class="module-description" data-i18n="resistance.modules.basics.description">Naucz się podstawowych sygnałów ostrzegawczych</p>
+                    <div class="module-progress">
+                        <span class="progress-text">Ukończono: 75%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <button class="module-btn" data-i18n="resistance.buttons.continue">Kontynuuj</button>
+                </div>
+                
+                <div class="module-card unlocked" data-module="advanced">
+                    <div class="module-icon">🧠</div>
+                    <h4 class="module-title" data-i18n="resistance.modules.advanced.title">Zaawansowane Techniki</h4>
+                    <p class="module-description" data-i18n="resistance.modules.advanced.description">Subtelne formy manipulacji psychologicznej</p>
+                    <div class="module-progress">
+                        <span class="progress-text">Ukończono: 20%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <button class="module-btn" data-i18n="resistance.buttons.start">Rozpocznij</button>
+                </div>
+                
+                <div class="module-card locked" data-module="master">
+                    <div class="module-icon">🏆</div>
+                    <h4 class="module-title" data-i18n="resistance.modules.master.title">Mistrzostwo</h4>
+                    <p class="module-description" data-i18n="resistance.modules.master.description">Stań się ekspertem od manipulacji</p>
+                    <div class="unlock-requirement">
+                        <span data-i18n="resistance.unlockRequirement">🔒 Wymagane: 15/20 rozpoznanych technik</span>
+                    </div>
+                    <button class="module-btn" disabled data-i18n="resistance.buttons.locked">Zablokowany</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Psychological Games Section -->
+        <section id="psychological-games" class="games-section" aria-labelledby="games-title">
+            <h2 id="games-title" class="section-title" data-i18n="games.title">🎮 Gry Psychologiczne</h2>
+            
+            <div class="game-card featured" data-game="detector">
+                <div class="game-header">
+                    <h3 class="game-title" data-i18n="games.detector.title">Detektor Manipulacji</h3>
+                    <div class="game-badge" data-i18n="games.badges.popular">🔥 POPULARNE</div>
+                </div>
+                <div class="game-content">
+                    <p class="game-description" data-i18n="games.detector.description">
+                        Przeczytaj rozmowy i wskaż techniki manipulacji. Im szybciej, tym więcej punktów!
+                    </p>
+                    <div class="game-stats">
+                        <span class="stat" data-i18n="games.detector.stats.time">⏱️ Czas: 2-5 min</span>
+                        <span class="stat" data-i18n="games.detector.stats.record">🎯 Twój rekord: 847 pkt</span>
+                        <span class="stat" data-i18n="games.detector.stats.best">👑 Rekord: 1,234 pkt</span>
+                    </div>
+                    <button class="game-play-btn" data-i18n="games.playButton">Zagraj Teraz</button>
+                </div>
+            </div>
+            
+            <div class="game-card" data-game="simulator">
+                <div class="game-header">
+                    <h3 class="game-title" data-i18n="games.simulator.title">Symulator Rozmowy</h3>
+                    <div class="game-badge" data-i18n="games.badges.new">🆕 NOWE</div>
+                </div>
+                <div class="game-content">
+                    <p class="game-description" data-i18n="games.simulator.description">
+                        Prowadź rozmowę z AI manipulatorem. Każda odpowiedź ma konsekwencje!
+                    </p>
+                    <div class="game-stats">
+                        <span class="stat" data-i18n="games.simulator.stats.time">⏱️ Czas: 5-10 min</span>
+                        <span class="stat" data-i18n="games.simulator.stats.scenarios">🎭 Scenariuszy: 12</span>
+                        <span class="stat" data-i18n="games.simulator.stats.completed">🏆 Ukończono: 3/12</span>
+                    </div>
+                    <button class="game-play-btn" data-i18n="games.playButton">Zagraj Teraz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievement System -->
+        <section id="achievement-system" class="achievement-section" aria-labelledby="achievement-title">
+            <h2 id="achievement-title" class="section-title" data-i18n="achievements.title">🏆 System Osiągnięć</h2>
+            
+            <div class="achievement-grid">
+                <div class="achievement-card unlocked" data-achievement="first-detection">
+                    <div class="achievement-icon">🔍</div>
+                    <h4 class="achievement-title" data-i18n="achievements.firstDetection.title">Pierwszy Detektor</h4>
+                    <p class="achievement-description" data-i18n="achievements.firstDetection.description">Rozpoznałeś swoją pierwszą technikę manipulacji</p>
+                    <div class="achievement-date" data-i18n="achievements.firstDetection.date">Odblokowano: 2 dni temu</div>
+                </div>
+                
+                <div class="achievement-card progress" data-achievement="manipulation-master">
+                    <div class="achievement-icon">🧠</div>
+                    <h4 class="achievement-title" data-i18n="achievements.manipulationMaster.title">Mistrz Manipulacji</h4>
+                    <p class="achievement-description" data-i18n="achievements.manipulationMaster.description">Rozpoznaj 20 różnych technik manipulacji</p>
+                    <div class="achievement-progress">
+                        <span class="progress-text" data-i18n="achievements.manipulationMaster.progress">Postęp: 8/20</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="achievement-card locked" data-achievement="resistance-hero">
+                    <div class="achievement-icon">🛡️</div>
+                    <h4 class="achievement-title" data-i18n="achievements.resistanceHero.title">Bohater Oporu</h4>
+                    <p class="achievement-description" data-i18n="achievements.resistanceHero.description">Skutecznie odpierz 50 prób manipulacji</p>
+                    <div class="unlock-hint" data-i18n="achievements.resistanceHero.hint">Ukończ wszystkie moduły treningu</div>
+                </div>
+                
+                <div class="achievement-card secret" data-achievement="easter-egg">
+                    <div class="achievement-icon">❓</div>
+                    <h4 class="achievement-title" data-i18n="achievements.easterEgg.title">???</h4>
+                    <p class="achievement-description" data-i18n="achievements.easterEgg.description">Tajemnicze osiągnięcie...</p>
+                    <div class="secret-hint" data-i18n="achievements.easterEgg.hint">Znajdź ukryty easter egg</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manipulation Museum -->
+        <section id="manipulation-museum" class="museum-section" aria-labelledby="museum-title">
+            <h2 id="museum-title" class="section-title" data-i18n="museum.title">🏛️ Muzeum Technik Manipulacji</h2>
+            
+            <div class="museum-gallery">
+                <div class="exhibit-card" data-technique="gaslighting">
+                    <div class="exhibit-image">
+                        <div class="technique-icon">🌫️</div>
+                    </div>
+                    <div class="exhibit-info">
+                        <h3 class="exhibit-title" data-i18n="museum.techniques.gaslighting.title">Gaslighting</h3>
+                        <p class="exhibit-description" data-i18n="museum.techniques.gaslighting.description">Podważanie percepcji rzeczywistości ofiary</p>
+                        <div class="exhibit-stats">
+                            <span class="stat" data-i18n="museum.techniques.gaslighting.frequency">📊 Częstość: 89%</span>
+                            <span class="stat" data-i18n="museum.techniques.gaslighting.danger">⚠️ Niebezpieczeństwo: Wysokie</span>
+                        </div>
+                        <button class="exhibit-btn" data-i18n="museum.examineButton">Zbadaj Technikę</button>
+                    </div>
+                </div>
+                
+                <div class="exhibit-card" data-technique="love-bombing">
+                    <div class="exhibit-image">
+                        <div class="technique-icon">💣</div>
+                    </div>
+                    <div class="exhibit-info">
+                        <h3 class="exhibit-title" data-i18n="museum.techniques.loveBombing.title">Love Bombing</h3>
+                        <p class="exhibit-description" data-i18n="museum.techniques.loveBombing.description">Nadmierna uwaga i uczucia na początku relacji</p>
+                        <div class="exhibit-stats">
+                            <span class="stat" data-i18n="museum.techniques.loveBombing.frequency">📊 Częstość: 67%</span>
+                            <span class="stat" data-i18n="museum.techniques.loveBombing.danger">⚠️ Niebezpieczeństwo: Średnie</span>
+                        </div>
+                        <button class="exhibit-btn" data-i18n="museum.examineButton">Zbadaj Technikę</button>
+                    </div>
+                </div>
+                
+                <div class="exhibit-card" data-technique="triangulation">
+                    <div class="exhibit-image">
+                        <div class="technique-icon">📐</div>
+                    </div>
+                    <div class="exhibit-info">
+                        <h3 class="exhibit-title" data-i18n="museum.techniques.triangulation.title">Triangulacja</h3>
+                        <p class="exhibit-description" data-i18n="museum.techniques.triangulation.description">Wykorzystywanie trzeciej osoby przeciwko ofierze</p>
+                        <div class="exhibit-stats">
+                            <span class="stat" data-i18n="museum.techniques.triangulation.frequency">📊 Częstość: 45%</span>
+                            <span class="stat" data-i18n="museum.techniques.triangulation.danger">⚠️ Niebezpieczeństwo: Wysokie</span>
+                        </div>
+                        <button class="exhibit-btn" data-i18n="museum.examineButton">Zbadaj Technikę</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Chat Simulator -->
+        <section class="interactive-section enhanced-chat" aria-labelledby="interactive-title">
+            <h2 id="interactive-title" class="section-title" data-i18n="chat.title">🤖 Zaawansowany Symulator AI</h2>
+            
+            <div class="ai-personality-selector">
+                <h3 class="personality-title" data-i18n="chat.personalityTitle">Wybierz typ manipulatora:</h3>
+                <div class="personality-buttons">
+                    <button class="personality-btn active" data-personality="narcissist">
+                        <span class="personality-icon">👑</span>
+                        <span class="personality-name" data-i18n="chat.personalities.narcissist.name">Narcyz</span>
+                        <span class="personality-trait" data-i18n="chat.personalities.narcissist.trait">Egocentryczny, potrzebuje podziwu</span>
+                    </button>
+                    <button class="personality-btn" data-personality="victim">
+                        <span class="personality-icon">😢</span>
+                        <span class="personality-name" data-i18n="chat.personalities.victim.name">Wieczna Ofiara</span>
+                        <span class="personality-trait" data-i18n="chat.personalities.victim.trait">Szantaż emocjonalny, poczucie winy</span>
+                    </button>
+                    <button class="personality-btn" data-personality="controller">
+                        <span class="personality-icon">🎮</span>
+                        <span class="personality-name" data-i18n="chat.personalities.controller.name">Kontroler</span>
+                        <span class="personality-trait" data-i18n="chat.personalities.controller.trait">Dominacja, izolacja, kontrola</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="ai-simulator enhanced-simulator">
+                <div class="simulator-header">
+                    <h3 class="simulator-title">Rozmowa z AI Manipulatorem</h3>
+                    <div class="simulator-stats">
+                        <span class="stat">🎯 <span data-i18n="chat.stats.detected">Technik wykrytych:</span> <span id="detected-techniques">0</span></span>
+                        <span class="stat">🛡️ <span data-i18n="chat.stats.deflected">Skutecznie odparto:</span> <span id="deflected-attempts">0</span></span>
+                        <span class="stat">⚠️ <span data-i18n="chat.stats.threat">Poziom zagrożenia:</span> <span id="threat-level" data-i18n="chat.threatLevels.low">Niski</span></span>
+                    </div>
+                </div>
+                
+                <div id="chat-container" class="chat-container enhanced-chat-container" role="log" aria-live="polite" aria-label="Historia rozmowy z AI">
+                    <div class="chat-message ai intro-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="chat-bubble ai">
+                            <div class="message-content" data-i18n="chat.intro">
+                                Witaj! Jestem AI zaprogramowane do demonstracji technik manipulacji. 
+                                Każda moja wypowiedź może zawierać ukryte techniki. Bądź czujny!
+                            </div>
+                            <div class="message-analysis hidden">
+                                <span class="analysis-tag">💡 Analiza: Wprowadzenie bez manipulacji</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="chat-form" class="chat-form enhanced-form">
+                    <div class="input-container">
+                        <label for="chat-input" class="sr-only">Wiadomość do symulatora AI</label>
+                        <input type="text" id="chat-input" class="chat-input enhanced-input" 
+                               data-i18n-placeholder="chat.placeholder"
+                               placeholder="Napisz swoją odpowiedź..." 
+                               aria-describedby="chat-help"
+                               maxlength="200">
+                        <button type="button" id="analysis-toggle" class="analysis-toggle" title="Przełącz analizę wiadomości">
+                            🔍
+                        </button>
+                        <button type="submit" class="chat-submit enhanced-submit" data-i18n-aria-label="chat.sendButton" data-i18n="chat.sendButton">
+                            Wyślij
+                        </button>
+                    </div>
+                    <div class="input-suggestions" id="input-suggestions">
+                        <button type="button" class="suggestion-btn" data-response="healthy" data-i18n="chat.suggestions.healthy">
+                            💚 Zdrowa odpowiedź
+                        </button>
+                        <button type="button" class="suggestion-btn" data-response="assertive" data-i18n="chat.suggestions.assertive">
+                            💪 Asertywna odpowiedź
+                        </button>
+                        <button type="button" class="suggestion-btn" data-response="vulnerable" data-i18n="chat.suggestions.vulnerable">
+                            😔 Podatna odpowiedź
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="chat-help-section">
+                    <p id="chat-help" class="chat-help" data-i18n="chat.help">
+                        💡 <strong>Wskazówka:</strong> Kliknij 🔍 aby zobaczyć analizę technik manipulacji w czasie rzeczywistym.
+                    </p>
+                    <div class="manipulation-legend">
+                        <span class="legend-item"><span class="legend-color gaslighting"></span> Gaslighting</span>
+                        <span class="legend-item"><span class="legend-color emotional-blackmail"></span> Szantaż emocjonalny</span>
+                        <span class="legend-item"><span class="legend-color love-bombing"></span> Love bombing</span>
+                        <span class="legend-item"><span class="legend-color triangulation"></span> Triangulacja</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Gallery -->
+        <section id="studio-section" class="studio-section enhanced-studio" aria-labelledby="studio-title">
+            <h2 id="studio-title" class="section-title" data-i18n="studio.title">🎙️ Studio Radia Adamowo</h2>
+            <div class="studio-grid">
+                <article class="studio-item interactive-studio">
+                    <img src="public/images/studio/studio-1.png" alt="Zespół Radia Adamowo w profesjonalnym studiu nagraniowym" class="studio-image" loading="lazy">
+                    <div class="studio-content">
+                        <h3 class="studio-item-title" data-i18n="studio.team.title">Zespół Radia Adamowo</h3>
+                        <p class="studio-item-text" data-i18n="studio.team.description">Prowadzący programu w profesjonalnym studiu nagraniowym, gdzie analizujemy przypadki manipulacji psychologicznej.</p>
+                    </div>
+                    <div class="studio-stats">
+                        <span class="stat" data-i18n="studio.team.auditions">🎙️ 247 audycji</span>
+                        <span class="stat" data-i18n="studio.team.listeners">👥 15,847 słuchaczy</span>
+                    </div>
+                </article>
+                
+                <article class="studio-item interactive-studio">
+                    <img src="public/images/studio/studio-2.png" alt="Serce studia - centrum pracy nad analizą toksycznych relacji" class="studio-image" loading="lazy">
+                    <div class="studio-content">
+                        <h3 class="studio-item-title" data-i18n="studio.heart.title">Serce Radia</h3>
+                        <p class="studio-item-text" data-i18n="studio.heart.description">W centrum naszej pracy jest empatia i zrozumienie dla osób dotkniętych toksycznymi relacjami.</p>
+                    </div>
+                    <div class="studio-stats">
+                        <span class="stat" data-i18n="studio.heart.saved">❤️ 892 uratowanych</span>
+                        <span class="stat" data-i18n="studio.heart.support">📞 24/7 wsparcie</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Violence Loop -->
+        <section id="violence-loop" class="violence-section enhanced-violence" aria-labelledby="violence-title">
+            <h2 id="violence-title" class="section-title" data-i18n="violenceLoop.title">♾️ Interaktywna Pętla Przemocy</h2>
+            <div class="violence-interactive enhanced-interactive" role="region" aria-label="Interaktywna animacja pętli przemocy">
+                
+                <div class="cycle-phases">
+                    <div class="phase-indicator" data-phase="tension">
+                        <div class="phase-icon">⚡</div>
+                        <span class="phase-name" data-i18n="violenceLoop.phases.tension">Napięcie</span>
+                    </div>
+                    <div class="phase-indicator active" data-phase="explosion">
+                        <div class="phase-icon">💥</div>
+                        <span class="phase-name" data-i18n="violenceLoop.phases.explosion">Wybuch</span>
+                    </div>
+                    <div class="phase-indicator" data-phase="honeymoon">
+                        <div class="phase-icon">🍯</div>
+                        <span class="phase-name" data-i18n="violenceLoop.phases.honeymoon">Miodowy miesiąc</span>
+                    </div>
+                    <div class="phase-indicator" data-phase="calm">
+                        <div class="phase-icon">😴</div>
+                        <span class="phase-name" data-i18n="violenceLoop.phases.calm">Spokój</span>
+                    </div>
+                </div>
+                
+                <svg width="400" height="200" class="violence-svg enhanced-svg" aria-describedby="violence-description">
+                    <defs>
+                        <radialGradient id="energyGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0.2" />
+                        </radialGradient>
+                        <filter id="energyGlow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge> 
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <circle id="energy-field" cx="200" cy="100" r="80" fill="url(#energyGradient)" opacity="0.3" class="pulsating"/>
+                    
+                    <line id="connection-line" x1="100" y1="100" x2="300" y2="100" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5" opacity="0.6">
+                        <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
+                    </line>
+                    
+                    <circle id="avatar-d" class="avatar fire-active interactive-avatar" cx="100" cy="100" r="30" 
+                            tabindex="0" role="button" aria-label="Postać D - kliknij aby zobaczyć perspektywę"></circle>
+                    <text class="avatar-label" x="100" y="107">D</text>
+                    
+                    <circle id="avatar-b" class="avatar fire-active interactive-avatar" cx="300" cy="100" r="30" 
+                            tabindex="0" role="button" aria-label="Postać B - kliknij aby zobaczyć perspektywę"></circle>
+                    <text class="avatar-label" x="300" y="107">B</text>
+                    
+                    <g class="technique-labels">
+                        <text class="technique-label" x="50" y="50" opacity="0.7">Gaslighting</text>
+                        <text class="technique-label" x="320" y="60" opacity="0.7">Szantaż</text>
+                        <text class="technique-label" x="180" y="40" opacity="0.7">Kontrola</text>
+                        <text class="technique-label" x="160" y="170" opacity="0.7">Izolacja</text>
+                    </g>
+                </svg>
+                
+                <div id="violence-description" class="violence-description enhanced-description">
+                    <h4 class="cycle-phase-title" data-i18n="violenceLoop.currentPhase">Faza: Wybuch przemocy</h4>
+                    <p class="cycle-phase-description" data-i18n="violenceLoop.phaseDescription">
+                        W tej fazie dochodzi do kulminacji nagromadzonego napięcia. Manipulant traci kontrolę nad sobą, 
+                        a ofiara doświadcza pełnej siły przemocy psychologicznej lub fizycznej.
+                    </p>
+                    <div class="cycle-controls">
+                        <button class="cycle-btn" data-action="prev" data-i18n="violenceLoop.controls.previous">← Poprzednia faza</button>
+                        <button class="cycle-btn" data-action="play" data-i18n="violenceLoop.controls.pause">⏸ Pauza</button>
+                        <button class="cycle-btn" data-action="next" data-i18n="violenceLoop.controls.next">Następna faza →</button>
+                    </div>
+                </div>
+                
+                <div class="perspective-switcher">
+                    <h4 class="switcher-title" data-i18n="violenceLoop.perspectives.title">Zobacz z perspektywy:</h4>
+                    <div class="perspective-buttons">
+                        <button class="perspective-btn active" data-perspective="victim" data-i18n="violenceLoop.perspectives.victim">
+                            👤 Ofiary
+                        </button>
+                        <button class="perspective-btn" data-perspective="manipulator" data-i18n="violenceLoop.perspectives.manipulator">
+                            😈 Manipulatora
+                        </button>
+                        <button class="perspective-btn" data-perspective="observer" data-i18n="violenceLoop.perspectives.observer">
+                            👁️ Obserwatora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide with Interactive Elements -->
+        <section id="guide" class="guide-section enhanced-guide" aria-labelledby="guide-title">
+            <h2 id="guide-title" class="section-title" data-i18n="guide.title">📚 Interaktywny Poradnik: 8 Grzechów</h2>
+            <p class="guide-intro" data-i18n="guide.intro">
+                Poznaj najczęstsze techniki toksycznych osób. Kliknij każdy grzech aby zobaczyć przykłady i nauczyć się obrony.
+            </p>
+            
+            <div class="guide-progress">
+                <span class="progress-text" data-i18n="guide.progress">Postęp nauki: <span id="guide-progress-count">0/8</span></span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="guide-progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <div class="sins-grid enhanced-sins-grid" role="list">
+                <!-- Sins will be generated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Final Lesson -->
+        <section class="final-section enhanced-final">
+            <div class="infinity-separator enhanced-separator" aria-hidden="true">
+                <div class="separator-particles"></div>
+            </div>
+            <h2 class="final-title" data-i18n="final.title">Ostateczna Lekcja</h2>
+            <p class="final-text" data-i18n="final.description">
+                Wygrała mury, straciła wszystko inne. On stracił mury, odzyskał wolność. 
+                To ostateczna lekcja o prawdziwej cenie trwania w toksycznej relacji i o sile, jaką daje jej przerwanie.
+            </p>
+            
+            <div class="final-interactive">
+                <div class="lesson-cards">
+                    <div class="lesson-card" data-lesson="recognition">
+                        <div class="lesson-icon">👁️</div>
+                        <h3 class="lesson-title" data-i18n="final.lessons.recognition.title">Rozpoznawanie</h3>
+                        <p class="lesson-text" data-i18n="final.lessons.recognition.description">Nauczyłeś się rozpoznawać 20+ technik manipulacji</p>
+                    </div>
+                    <div class="lesson-card" data-lesson="resistance">
+                        <div class="lesson-icon">🛡️</div>
+                        <h3 class="lesson-title" data-i18n="final.lessons.resistance.title">Odporność</h3>
+                        <p class="lesson-text" data-i18n="final.lessons.resistance.description">Wzmocniłeś swoją odporność psychologiczną</p>
+                    </div>
+                    <div class="lesson-card" data-lesson="freedom">
+                        <div class="lesson-icon">🕊️</div>
+                        <h3 class="lesson-title" data-i18n="final.lessons.freedom.title">Wolność</h3>
+                        <p class="lesson-text" data-i18n="final.lessons.freedom.description">Zyskałeś narzędzia do uwolnienia się</p>
+                    </div>
+                </div>
+                
+                <div class="graduation-certificate">
+                    <h3 class="certificate-title" data-i18n="final.certificate.title">🎓 Certyfikat Ukończenia</h3>
+                    <p class="certificate-text" data-i18n="final.certificate.description">
+                        Gratulacje! Ukończyłeś kompleksowy kurs rozpoznawania i opierania się manipulacji psychologicznej.
+                    </p>
+                    <button class="certificate-btn" data-i18n="final.certificate.button">Pobierz Certyfikat</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer enhanced-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer.title">Radio Adamowo</h3>
+                    <p class="footer-description" data-i18n="footer.description">
+                        Nadajemy z masztu w Adamowie. Najlepsze narzędzie edukacyjne o manipulacji psychologicznej. 
+                        Uczymy przez doświadczenie, chronimy przez wiedzę.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,847</span>
+                            <span class="stat-label" data-i18n="footer.stats.users">Użytkowników</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">892</span>
+                            <span class="stat-label" data-i18n="footer.stats.saved">Uratowanych</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label" data-i18n="footer.stats.support">Wsparcie</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle" data-i18n="footer.help.title">Natychmiastowa Pomoc</h4>
+                    <div class="help-resources">
+                        <a href="tel:800120002" class="help-link emergency">
+                            <span class="help-icon">🆘</span>
+                            <span class="help-text">
+                                <strong data-i18n="footer.help.blueLine">Niebieska Linia</strong><br>
+                                800 120 002 (24h)
+                            </span>
+                        </a>
+                        <a href="tel:800120226" class="help-link">
+                            <span class="help-icon">👩</span>
+                            <span class="help-text">
+                                <strong data-i18n="footer.help.womenCenter">Centrum Praw Kobiet</strong><br>
+                                800 120 226
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle" data-i18n="footer.community.title">Społeczność</h4>
+                    <div class="community-links">
+                        <a href="#" class="community-link">
+                            <span class="community-icon">💬</span>
+                            <span data-i18n="footer.community.forum">Forum Wsparcia</span>
+                        </a>
+                        <a href="#" class="community-link">
+                            <span class="community-icon">📖</span>
+                            <span data-i18n="footer.community.blog">Blog Edukacyjny</span>
+                        </a>
+                        <a href="#" class="community-link">
+                            <span class="community-icon">🎯</span>
+                            <span data-i18n="footer.community.tests">Testy Online</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright" data-i18n="footer.copyright">
+                    © <span id="current-year">2025</span> Radio Adamowo. 
+                    Wszelkie prawa zastrzeżone... i poddane publicznej analizie.
+                </p>
+                <p class="footer-mission" data-i18n="footer.mission">
+                    Celem platformy jest edukacja na temat manipulacji psychologicznej. 
+                    Słuchaj, analizuj, chroń siebie i innych.
+                </p>
+                <p class="footer-disclaimer" data-i18n="footer.disclaimer">
+                    Wszelka zbieżność imion i miejsc jest całkowicie przypadkowa. 
+                    Platforma stanowi narzędzie edukacyjne i nie zastępuje profesjonalnej pomocy psychologicznej.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="technique-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="technique-modal-title">
+        <div class="modal-content technique-modal-content">
+            <div class="modal-header">
+                <h3 id="technique-modal-title" class="modal-title">Szczegóły Techniki</h3>
+                <button id="technique-modal-close" class="modal-close" aria-label="Zamknij modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="technique-details">
+                    <div class="technique-icon-large" id="technique-icon"></div>
+                    <div class="technique-info">
+                        <h4 id="technique-name" class="technique-name"></h4>
+                        <p id="technique-description" class="technique-description"></p>
+                        <div class="technique-examples" id="technique-examples"></div>
+                        <div class="technique-defense" id="technique-defense"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="practice-technique" class="btn-primary">Przećwicz Obronę</button>
+                <button id="add-to-favorites" class="btn-secondary">Dodaj do Ulubionych</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="note-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="note-modal-title">
+        <div class="modal-content">
+            <form id="note-form" class="note-form">
+                <h3 id="note-modal-title" class="modal-title" data-i18n="notes.title">📝 Dodaj Notatkę Refleksji</h3>
+                
+                <div class="form-group">
+                    <label for="note-date" class="form-label" data-i18n="notes.date">Data</label>
+                    <input type="date" id="note-date" class="form-input" readonly aria-describedby="note-date-help">
+                    <p id="note-date-help" class="form-help" data-i18n="notes.dateHelp">Data jest automatycznie ustawiona</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="note-name" class="form-label" data-i18n="notes.name">Twoje imię (opcjonalne)</label>
+                    <input type="text" id="note-name" class="form-input" 
+                           data-i18n-placeholder="notes.namePlaceholder"
+                           placeholder="Jak chcesz być nazywany/a?" 
+                           maxlength="50" 
+                           aria-describedby="note-name-help">
+                    <p id="note-name-help" class="form-help" data-i18n="notes.nameHelp">Zostanie zachowana anonimowość</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="note-category" class="form-label" data-i18n="notes.category">Kategoria doświadczenia</label>
+                    <select id="note-category" class="form-input">
+                        <option value="recognition" data-i18n="notes.categories.recognition">Rozpoznałem/am manipulację</option>
+                        <option value="resistance" data-i18n="notes.categories.resistance">Skutecznie się oparłem/am</option>
+                        <option value="learning" data-i18n="notes.categories.learning">Nowe odkrycie</option>
+                        <option value="reflection" data-i18n="notes.categories.reflection">Refleksja osobista</option>
+                        <option value="progress" data-i18n="notes.categories.progress">Postęp w nauce</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="note-text" class="form-label" data-i18n="notes.text">Twoje przemyślenia</label>
+                    <textarea id="note-text" class="form-textarea" 
+                              data-i18n-placeholder="notes.textPlaceholder"
+                              placeholder="Opisz swoje doświadczenie, odkrycie lub refleksję..." 
+                              rows="5" 
+                              maxlength="1000" 
+                              required
+                              aria-describedby="note-text-help"></textarea>
+                    <p id="note-text-help" class="form-help" data-i18n="notes.textHelp">Podziel się swoimi przemyśleniami (5-1000 znaków)</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" data-i18n="notes.mood">Twój nastrój</label>
+                    <div class="mood-selector-form">
+                        <button type="button" class="mood-btn-form" data-mood="empowered" data-i18n="notes.moods.empowered">💪 Wzmocniony</button>
+                        <button type="button" class="mood-btn-form" data-mood="relieved" data-i18n="notes.moods.relieved">😌 Ulga</button>
+                        <button type="button" class="mood-btn-form" data-mood="confused" data-i18n="notes.moods.confused">😕 Zdezorientowany</button>
+                        <button type="button" class="mood-btn-form" data-mood="angry" data-i18n="notes.moods.angry">😠 Zły</button>
+                        <button type="button" class="mood-btn-form" data-mood="hopeful" data-i18n="notes.moods.hopeful">🌟 Pełen nadziei</button>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" id="modal-close-btn" class="btn-secondary" data-i18n="notes.close">
+                        Zamknij
+                    </button>
+                    <button type="submit" class="btn-primary" data-i18n="notes.save">
+                        💾 Zapisz Refleksję
+                    </button>
+                </div>
+                
+                <div id="note-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top enhanced-back-to-top hidden" data-i18n-aria-label="backToTop.label" title="Wróć na górę (Home)">
+        <span class="back-to-top-icon">↑</span>
+        <span class="back-to-top-text" data-i18n="backToTop.text">Góra</span>
+    </button>
+
+    <!-- Visualizer Canvas -->
+    <canvas id="visualizer-canvas" class="visualizer-canvas enhanced-visualizer" aria-hidden="true"></canvas>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action-menu">
+        <button id="fab-main" class="fab-main" aria-label="Menu szybkich akcji">
+            <span class="fab-icon">🎯</span>
+        </button>
+        <div class="fab-menu hidden">
+            <button class="fab-item" data-action="emergency" data-i18n-aria-label="fab.emergency.aria">
+                <span class="fab-icon">🆘</span>
+                <span class="fab-label" data-i18n="fab.emergency.label">Pomoc</span>
+            </button>
+            <button class="fab-item" data-action="quick-test" data-i18n-aria-label="fab.quickTest.aria">
+                <span class="fab-icon">⚡</span>
+                <span class="fab-label" data-i18n="fab.quickTest.label">Test</span>
+            </button>
+            <button class="fab-item" data-action="progress" data-i18n-aria-label="fab.progress.aria">
+                <span class="fab-icon">📊</span>
+                <span class="fab-label" data-i18n="fab.progress.label">Postęp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <!-- Easter Egg: Konami Code -->
+    <div id="konami-easter-egg" class="easter-egg-modal hidden">
+        <div class="easter-egg-content">
+            <h2 data-i18n="easterEgg.title">🎉 Gratulacje!</h2>
+            <p data-i18n="easterEgg.description">Znalazłeś ukryty easter egg! Oto specjalna nagroda:</p>
+            <div class="easter-egg-reward">
+                <h3 data-i18n="easterEgg.reward">🏆 Odblokowano: "Mistrz Sekretów"</h3>
+                <p data-i18n="easterEgg.rewardDesc">Otrzymujesz dostęp do ukrytych materiałów ekspertów!</p>
+            </div>
+            <button id="easter-egg-close" class="btn-primary" data-i18n="easterEgg.close">Zamknij</button>
+        </div>
+    </div>
+</body>
+</html>
