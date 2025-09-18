@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pl" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta -->
+    <title data-i18n="meta.title">Radio Adamowo - Słuchaj szumu prawdy w eterze manipulacji</title>
+    <meta name="description" content="Interaktywna platforma edukacyjna o manipulacji psychologicznej. Doświadcz technik manipulacji, naucz się je rozpoznawać i chronić się przed nimi." data-i18n-content="meta.description">
+    <meta name="keywords" content="radio, manipulacja, toksyczne relacje, psychologia, edukacja, podcast, gaslighting, narcyzm">
+    <meta name="author" content="Radio Adamowo">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Radio Adamowo - Najlepsze narzędzie edukacyjne o manipulacji">
+    <meta property="og:description" content="Interaktywna platforma gdzie doświadczysz manipulacji na własnej skórze i nauczysz się ją rozpoznawać">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/placeholders/studio-preview.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Radio Adamowo - Edukacja przez doświadczenie">
+    <meta name="twitter:description" content="Słuchaj szumu prawdy w eterze manipulacji">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#d97706">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Icons -->
+    <link rel="icon" href="images/placeholders/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/placeholders/favicon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-light" data-manipulation-level="0" data-user-resistance="unknown">
+    
+    <!-- Skip Links for Accessibility -->
+    <a href="#main-player" class="skip-link" data-i18n="accessibility.skip_to_player">Przejdź do odtwarzacza</a>
+    <a href="#main-content" class="skip-link" data-i18n="accessibility.skip_to_content">Przejdź do treści</a>
+    <a href="#main-nav" class="skip-link" data-i18n="accessibility.skip_to_nav">Przejdź do nawigacji</a>
+    
+    <!-- Autoplay Permission Overlay -->
+    <div id="autoplay-overlay" class="autoplay-overlay" role="dialog" aria-modal="true" aria-labelledby="autoplay-title">
+        <div class="autoplay-content">
+            <div class="radio-tower-animation">
+                <div class="tower">
+                    <div class="mast"></div>
+                    <div class="antenna"></div>
+                    <div class="signal-wave wave-1"></div>
+                    <div class="signal-wave wave-2"></div>
+                    <div class="signal-wave wave-3"></div>
+                </div>
+            </div>
+            <h2 id="autoplay-title" data-i18n="autoplay.title">Radio Adamowo</h2>
+            <p data-i18n="autoplay.description">Ze względu na ograniczenia przeglądarek, musisz rozpocząć transmisję ręcznie.</p>
+            <div class="mood-selection">
+                <p data-i18n="autoplay.choiceQuestion">Jak chcesz rozpocząć swoją edukację?</p>
+                <div class="mood-buttons">
+                    <button id="mood-easy" class="mood-btn" data-mood="easy">
+                        <span data-i18n="autoplay.easy">Łagodnie (dla wrażliwych)</span>
+                    </button>
+                    <button id="mood-normal" class="mood-btn primary" data-mood="normal">
+                        <span data-i18n="autoplay.normal">Normalnie ⭐ POLECANE</span>
+                    </button>
+                    <button id="mood-hard" class="mood-btn" data-mood="hard">
+                        <span data-i18n="autoplay.hard">Intensywnie (dla odpornych)</span>
+                    </button>
+                </div>
+                <p class="mood-hint" data-i18n="autoplay.hint">💡 To fałszywy wybór - wszystkie opcje robią to samo!</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sticky Audio Player -->
+    <header id="main-player" class="sticky-player" role="banner">
+        <div class="player-container">
+            <!-- Tower Branding -->
+            <div class="player-branding">
+                <div class="tower-mini">
+                    <div class="mast-mini"></div>
+                    <div class="antenna-mini"></div>
+                </div>
+                <div class="station-info">
+                    <h1 class="station-name" data-i18n="header.title">Radio Adamowo</h1>
+                    <p class="station-tagline" data-i18n="header.subtitle">Słuchaj szumu prawdy w eterze manipulacji</p>
+                </div>
+            </div>
+            
+            <!-- Audio Controls -->
+            <div class="audio-controls" role="group" aria-label="Audio controls">
+                <button id="radio-prev-btn" class="control-btn" aria-label="Previous track" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 6v12l10-6z"/>
+                        <path d="M4 18l3-6-3-6v12z"/>
+                    </svg>
+                </button>
+                <button id="radio-play-pause-btn" class="control-btn primary" aria-label="Play/Pause" disabled>
+                    <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg class="pause-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>
+                </button>
+                <button id="radio-next-btn" class="control-btn" aria-label="Next track" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17 6v12l-10-6z"/>
+                        <path d="M20 6l-3 6 3 6V6z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Track Info -->
+            <div class="track-info">
+                <div class="track-details">
+                    <div class="track-title" id="current-track-title" data-i18n="radio.trackInfo">Załaduj muzykę</div>
+                    <div class="track-meta" id="current-track-meta">
+                        <span class="category" id="current-category"></span>
+                        <span class="duration" id="current-duration">00:00</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Volume & Options -->
+            <div class="player-options">
+                <button id="shuffle-btn" class="option-btn" aria-label="Shuffle" aria-pressed="false">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+                    </svg>
+                </button>
+                <button id="mute-btn" class="option-btn" aria-label="Mute/Unmute" aria-pressed="false">
+                    <svg class="volume-on" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                    <svg class="volume-off hidden" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                    </svg>
+                </button>
+                <div class="visualizer" id="visualizer" aria-hidden="true">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hidden audio element -->
+        <audio id="radio-player" preload="none" crossorigin="anonymous"></audio>
+    </header>
+    
+    <!-- Main Navigation -->
+    <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul id="nav-menu" class="nav-menu" role="menubar">
+                <li role="none">
+                    <a href="#player" class="nav-link active" role="menuitem" data-section="player">
+                        <span class="nav-icon">📻</span>
+                        <span data-i18n="navigation.player">Odtwarzacz</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#laboratory" class="nav-link" role="menuitem" data-section="laboratory">
+                        <span class="nav-icon">🧪</span>
+                        <span data-i18n="navigation.laboratory">Laboratorium</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#resistance" class="nav-link" role="menuitem" data-section="resistance">
+                        <span class="nav-icon">🛡️</span>
+                        <span data-i18n="navigation.resistance">Trening Odporności</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#games" class="nav-link" role="menuitem" data-section="games">
+                        <span class="nav-icon">🎮</span>
+                        <span data-i18n="navigation.games">Gry Psychologiczne</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#museum" class="nav-link" role="menuitem" data-section="museum">
+                        <span class="nav-icon">🏛️</span>
+                        <span data-i18n="navigation.museum">Muzeum Manipulacji</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#achievements" class="nav-link" role="menuitem" data-section="achievements">
+                        <span class="nav-icon">🏆</span>
+                        <span data-i18n="navigation.achievements">Osiągnięcia</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Language Switcher -->
+            <div class="language-switcher" role="group" aria-label="Language selection">
+                <button id="lang-pl" class="lang-btn active" data-lang="pl" aria-pressed="true">PL</button>
+                <button id="lang-en" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                <button id="lang-nl" class="lang-btn" data-lang="nl" aria-pressed="false">NL</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        
+        <!-- Player Section -->
+        <section id="player" class="content-section active" aria-labelledby="player-heading">
+            <div class="container">
+                <h2 id="player-heading" class="section-title" data-i18n="player.title">Centrum Muzyczne</h2>
+                
+                <!-- Playlist Categories -->
+                <div class="playlist-categories" role="tablist" aria-label="Music categories">
+                    <button class="category-tab active" role="tab" data-category="ambient" aria-selected="true" id="tab-ambient">
+                        <span data-i18n="player.categories.ambient">Ambient</span>
+                    </button>
+                    <button class="category-tab" role="tab" data-category="disco" aria-selected="false" id="tab-disco">
+                        <span data-i18n="player.categories.disco">Disco</span>
+                    </button>
+                    <button class="category-tab" role="tab" data-category="hiphop" aria-selected="false" id="tab-hiphop">
+                        <span data-i18n="player.categories.hiphop">Hip-Hop</span>
+                    </button>
+                    <button class="category-tab" role="tab" data-category="kids" aria-selected="false" id="tab-kids">
+                        <span data-i18n="player.categories.kids">Dla Dzieci</span>
+                    </button>
+                </div>
+                
+                <!-- Playlist Display -->
+                <div class="playlist-container" role="tabpanel" aria-labelledby="tab-ambient">
+                    <div class="playlist" id="playlist">
+                        <!-- Tracks will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Fallback Message -->
+                <div id="audio-fallback" class="fallback-message hidden" role="alert">
+                    <h3 data-i18n="player.fallback.title">Brak dostępnych utworów</h3>
+                    <p data-i18n="player.fallback.message">W tej chwili nie mamy dostępnych utworów muzycznych. Spróbuj ponownie później.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Laboratory Section -->
+        <section id="laboratory" class="content-section" aria-labelledby="lab-heading">
+            <div class="container">
+                <h2 id="lab-heading" class="section-title" data-i18n="laboratory.title">🧪 Laboratorium Manipulacji</h2>
+                <p class="section-description" data-i18n="laboratory.description">Doświadcz technik manipulacji w kontrolowanym środowisku i naucz się je rozpoznawać.</p>
+                
+                <!-- Interactive content placeholder -->
+                <div class="lab-content">
+                    <div class="lab-module">
+                        <h3 data-i18n="laboratory.modules.detection.title">Detektor Manipulacji</h3>
+                        <p data-i18n="laboratory.modules.detection.description">Analizuj teksty i rozpoznawaj techniki manipulacyjne.</p>
+                        <button class="module-btn" data-i18n="common.coming_soon">Wkrótce</button>
+                    </div>
+                    
+                    <div class="lab-module">
+                        <h3 data-i18n="laboratory.modules.simulator.title">Symulator Relacji</h3>
+                        <p data-i18n="laboratory.modules.simulator.description">Symuluj toksyczne interakcje i naucz się odpowiedzi.</p>
+                        <button class="module-btn" data-i18n="common.coming_soon">Wkrótce</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Resistance Training Section -->
+        <section id="resistance" class="content-section" aria-labelledby="resistance-heading">
+            <div class="container">
+                <h2 id="resistance-heading" class="section-title" data-i18n="resistance.title">🛡️ Trening Odporności</h2>
+                <p class="section-description" data-i18n="resistance.description">Wzmocnij swoją odporność na manipulację przez systematyczny trening.</p>
+                
+                <!-- Resistance content placeholder -->
+                <div class="resistance-content">
+                    <div class="resistance-meter">
+                        <h3 data-i18n="resistance.meter.title">Twój poziom odporności</h3>
+                        <div class="meter">
+                            <div class="meter-fill" style="width: 42%"></div>
+                        </div>
+                        <p class="meter-label" data-i18n="resistance.levels.beginner">Początkujący</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Other sections will be populated similarly -->
+        <section id="games" class="content-section" aria-labelledby="games-heading">
+            <div class="container">
+                <h2 id="games-heading" class="section-title" data-i18n="games.title">🎮 Gry Psychologiczne</h2>
+                <p data-i18n="common.coming_soon">Wkrótce</p>
+            </div>
+        </section>
+        
+        <section id="museum" class="content-section" aria-labelledby="museum-heading">
+            <div class="container">
+                <h2 id="museum-heading" class="section-title" data-i18n="museum.title">🏛️ Muzeum Manipulacji</h2>
+                <p data-i18n="common.coming_soon">Wkrótce</p>
+            </div>
+        </section>
+        
+        <section id="achievements" class="content-section" aria-labelledby="achievements-heading">
+            <div class="container">
+                <h2 id="achievements-heading" class="section-title" data-i18n="achievements.title">🏆 Osiągnięcia</h2>
+                <p data-i18n="common.coming_soon">Wkrótce</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+    
+    <!-- Manipulation Detection Overlay -->
+    <div id="manipulation-detector" class="manipulation-detector hidden" role="alert" aria-live="assertive">
+        <div class="detector-content">
+            <div class="detector-icon">🧠</div>
+            <div class="detector-text">
+                <span class="detector-title" data-i18n="detector.title">Wykryto technikę manipulacji!</span>
+                <span class="detector-description" id="detector-description"></span>
+            </div>
+            <button id="detector-close" class="detector-close" data-i18n-aria-label="detector.close">×</button>
+        </div>
+    </div>
+    
+    <!-- Loading Script -->
+    <script src="script.js"></script>
+</body>
+</html>
